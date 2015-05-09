@@ -11,7 +11,9 @@ public class Test {
 		weapon wep = ItemGeneration.genNewWeapon(0);
 		armor arm = ItemGeneration.genNewArmor(0);
 		NPC npc = new NPC(0);
-		Player p = new Player();
+		Player p = new Player(0);
+		System.out.println(p.dexGet());
+		System.out.println(npc.cintGet());
 		World world = new World();
 		GUI gui = new GUI();
 		System.out.println(wep);

@@ -1,17 +1,28 @@
 package chars;
 
-import items.ItemGeneration;
-
 public class NPC extends Character{
 	
-	boolean friendly;
-	int type;
+	private boolean friendly;
+	private int type;
 	
 	public NPC(int roll){
-		maxHealth = 2;
-		currentHealth = maxHealth;
-		wep = ItemGeneration.genNewWeapon(0);
-		arm = ItemGeneration.genNewArmor(0);
+		allSet(roll, roll, roll, roll, roll, roll, roll);
+	}
+
+	public boolean isFriendly() {
+		return friendly;
+	}
+
+	public void setFriendly(boolean friendly) {
+		this.friendly = friendly;
+	}
+
+	public int typeGet() {
+		return type;
+	}
+
+	public void typeSet(int type) {
+		this.type = type;
 	}
 	
 	/*public String toString(){

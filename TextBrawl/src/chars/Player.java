@@ -1,18 +1,23 @@
 package chars;
 
-import items.ItemGeneration;
-
 public class Player extends Character {
 
-	int battlesFought;
-	//int timesDefeated;
-	int victories;
+	private int battlesFought;
 	
-	public Player(){
-		maxHealth = 10;
-		currentHealth = 10;
-		this.wep = ItemGeneration.genNewWeapon(0);
-		this.arm = ItemGeneration.genNewArmor(0);
+	public Player(int roll){
+		allSet(roll, roll, roll, roll, roll, roll, roll);
+	}
+
+	public int battlesFoughtGet() {
+		return battlesFought;
+	}
+
+	public void battlesFoughtSet(int battlesFought) {
+		this.battlesFought = battlesFought;
+	}
+	
+	public void battlesFoughtInc() {
+		this.battlesFought++;
 	}
 
 	
