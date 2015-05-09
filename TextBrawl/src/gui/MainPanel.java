@@ -24,6 +24,11 @@ public class MainPanel extends JPanel{
 	static JPanel buttonsPanel;
 	static JTextArea text;
 	
+	/**
+	 * MainPanel for the GUI
+	 * @return mainPanel
+	 * returns the mainPanel wich will be shown on the GUI
+	 */
 	public static JPanel maPanel(){
 	
 		JPanel mainPanel = new JPanel();

@@ -11,6 +11,9 @@ public class GUI {
 	private static final int PANEL_WIDTH = 900;
 	private static final int PANEL_HEIGTH = 600;
 	
+	/**
+	 * GUI for the Game
+	 */
 	public GUI(){
 		JFrame frame = new JFrame("TextAdventure");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
