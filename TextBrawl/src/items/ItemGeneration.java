@@ -1,15 +1,15 @@
 package items;
 
-public class ItemGeneration {
+public final class ItemGeneration {
 
-	public static weapon genNewWeapon(int roll) {
-		weapon wep = new weapon(roll);
+	public static Weapon genNewWeapon(int roll) {
+		Weapon wep = new Weapon(roll);
 		
 		return wep;
 	}
 	
-	public static armor genNewArmor(int roll) {
-		armor arm = new armor(roll);
+	public static Armor genNewArmor(int roll) {
+		Armor arm = new Armor(roll);
 		
 		return arm;
 	}

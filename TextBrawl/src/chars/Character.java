@@ -1,8 +1,8 @@
 package chars;
 
 import items.ItemGeneration;
-import items.armor;
-import items.weapon;
+import items.Armor;
+import items.Weapon;
 
 public abstract class Character {
 
@@ -12,8 +12,8 @@ public abstract class Character {
 	private int dex;
 	private int cint;
 	private int speed;
-	private armor arm;
-	private weapon wep;
+	private Armor arm;
+	private Weapon wep;
 	
 	public int currentHealthGet(){
 		return currentHealth;
@@ -39,11 +39,11 @@ public abstract class Character {
 		return speed;
 	}
 	
-	public armor armGet(){
+	public Armor armGet(){
 		return arm;
 	}
 	
-	public weapon wepGet(){
+	public Weapon wepGet(){
 		return wep;
 	}
 	

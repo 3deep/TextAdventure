@@ -5,7 +5,7 @@ import world.World;
 import chars.NPC;
 import chars.Player;
 
-public class TextAdventure {
+public final class TextAdventure {
 	
 	private Player p;
 	private NPC npc;

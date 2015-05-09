@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 @SuppressWarnings("serial")
-public class mainPanel extends JPanel{
+public class MainPanel extends JPanel{
 	
 	JPanel mainPanel;
 	static JPanel statsPanel;

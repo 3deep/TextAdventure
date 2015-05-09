@@ -8,9 +8,6 @@ import javax.swing.JPanel;
 
 public class GUI {
 	
-	//private GameOverScreen GO;
-	//private StartScreen SC;
-	
 	public GUI(){
 		JFrame frame = new JFrame("TextAdventure");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -23,7 +20,7 @@ public class GUI {
 		//------------ taken from: http://stackoverflow.com/questions/2442599/how-to-set-jframe-to-appear-centered-regardless-of-the-monitor-resolution
 		
 		
-		JPanel panel = mainPanel.maPanel();
+		JPanel panel = MainPanel.maPanel();
 		frame.add(panel);
 		frame.setVisible(true);
 	}

@@ -1,6 +1,6 @@
 package items;
 //first concept
-public class weapon {
+public class Weapon {
 	private int reqStr;
 	private int reqDex;
 	private int reqInt;
@@ -27,8 +27,8 @@ public class weapon {
 		
 		public WType typeFromVal(int numVal){
 			for (WType wtype: WType.values()){
-				if(wtype.numValGet() == numVal)
-					return wtype;
+				if(wtype.numValGet() == numVal){
+					return wtype;}
 			}
 			
 			return null;
@@ -39,7 +39,7 @@ public class weapon {
 	private WType type;
 			
 	
-	public weapon(int roll){
+	public Weapon(int roll){
 		reqStr = roll;
 		reqDex = roll;
 		reqInt = roll;
@@ -57,14 +57,14 @@ public class weapon {
 	}
 	
 	public int reqIntGet(){
-		return reqInt;
+		return reqInt;	
 	}
 	
 	public int dmgGet(){
 		return dmg;
 	}
 	
-	public weapon giveWeapon(){
+	public Weapon giveWeapon(){
 		return this;
 	}
 
@@ -74,9 +74,9 @@ public class weapon {
 
 	public void typeSet(int type) {
 		WType tmp = WType.W0;
-		if (tmp.typeFromVal(type) != null)
-			this.type = tmp.typeFromVal(type);
-		else this.type = WType.W0;
+		if (tmp.typeFromVal(type) != null){
+			this.type = tmp.typeFromVal(type);}
+		else {this.type = WType.W0;}
 	}
 	
 }

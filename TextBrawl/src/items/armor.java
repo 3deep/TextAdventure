@@ -1,6 +1,6 @@
 package items;
 
-public class armor {
+public class Armor {
 	private int reqStr;
 	private int reqDex;
 	private int reqInt;
@@ -25,8 +25,8 @@ public class armor {
 		
 		public AType typeFromVal(int numVal){
 			for (AType atype: AType.values()){
-				if(atype.numValGet() == numVal)
-					return atype;
+				if(atype.numValGet() == numVal){
+					return atype;}
 			}
 			
 			return null;
@@ -35,7 +35,7 @@ public class armor {
 	};
 	private AType type;
 	
-	public armor(int roll){
+	public Armor(int roll){
 		reqStr = roll;
 		reqDex = roll;
 		reqInt = roll;
@@ -59,7 +59,7 @@ public class armor {
 		return dmgBlock;
 	}
 	
-	public armor giveArmor(){
+	public Armor giveArmor(){
 		return this;
 	}
 
@@ -69,9 +69,9 @@ public class armor {
 
 	public void typeSet(int type) {
 		AType tmp = AType.NO_ARMOR;
-		if (tmp.typeFromVal(type) != null)
-			this.type = tmp.typeFromVal(type);
-		else this.type = AType.NO_ARMOR;
+		if (tmp.typeFromVal(type) != null){
+			this.type = tmp.typeFromVal(type);}
+		else {this.type = AType.NO_ARMOR;}
 	}
 	
 }

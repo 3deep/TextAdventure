@@ -8,8 +8,8 @@ import items.*;
 public class Test {
 	public static void main(final String args[]){
 	
-		weapon wep = ItemGeneration.genNewWeapon(0);
-		armor arm = ItemGeneration.genNewArmor(0);
+		Weapon wep = ItemGeneration.genNewWeapon(0);
+		Armor arm = ItemGeneration.genNewArmor(0);
 		NPC npc = new NPC(1);
 		Player p = new Player(2);
 		System.out.println(p.dexGet());
