@@ -8,10 +8,13 @@ import javax.swing.JPanel;
 
 public class GUI {
 	
+	private static final int PANEL_WIDTH = 900;
+	private static final int PANEL_HEIGTH = 600;
+	
 	public GUI(){
 		JFrame frame = new JFrame("TextAdventure");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(900, 600);
+		frame.setSize(PANEL_WIDTH, PANEL_HEIGTH);
 		frame.setResizable(true);
 		
 		//------------

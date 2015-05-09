@@ -10,6 +10,14 @@ import javax.swing.JTextArea;
 
 @SuppressWarnings("serial")
 public class MainPanel extends JPanel{
+
+	private static final int BORDER_SIZE = 10;
+	private static final int TEXT_WIDTH = 700;
+	private static final int TEXT_HEIGTH = 410;
+	private static final int STATS_WIDTH = 130;
+	private static final int BUTTONS_HEIGTH = 120;
+	private static final int PANEL_WIDTH = 880;
+	private static final int PANEL_HEIGTH = 580;
 	
 	JPanel mainPanel;
 	static JPanel statsPanel;
@@ -19,19 +27,19 @@ public class MainPanel extends JPanel{
 	public static JPanel maPanel(){
 	
 		JPanel mainPanel = new JPanel();
-		mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		mainPanel.setBorder(BorderFactory.createEmptyBorder(BORDER_SIZE, BORDER_SIZE, BORDER_SIZE, BORDER_SIZE));
 	
 		text = new JTextArea();
-		text.setPreferredSize(new Dimension(700, 410));
+		text.setPreferredSize(new Dimension(TEXT_WIDTH, TEXT_HEIGTH));
 		text.setEditable(false);
 		
 		statsPanel = new JPanel();
-		statsPanel.setPreferredSize(new Dimension(130, 410));
-		statsPanel.setBackground(new Color(10, 10, 10));
+		statsPanel.setPreferredSize(new Dimension(STATS_WIDTH, TEXT_HEIGTH));
+		statsPanel.setBackground(Color.DARK_GRAY);
 		
 		buttonsPanel = new JPanel();
-		buttonsPanel.setPreferredSize(new Dimension(700, 120));
-		buttonsPanel.setBackground(new Color(50, 50, 50));
+		buttonsPanel.setPreferredSize(new Dimension(TEXT_WIDTH, BUTTONS_HEIGTH));
+		buttonsPanel.setBackground(Color.GRAY);
 		
 		GroupLayout layout = new GroupLayout(mainPanel);
 		mainPanel.setLayout(layout);
@@ -59,7 +67,7 @@ public class MainPanel extends JPanel{
 						GroupLayout.PREFERRED_SIZE)
 				);
 	
-		mainPanel.setBounds(10, 10, 880, 580);
+		mainPanel.setBounds(BORDER_SIZE, BORDER_SIZE, PANEL_WIDTH, PANEL_HEIGTH);
 		return mainPanel;
 	}
 

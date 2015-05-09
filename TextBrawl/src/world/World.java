@@ -2,14 +2,14 @@ package world;
 
 public class World {
 		
-	boolean discoveredTown;
-	boolean discoveredForest;
-	boolean discoveredRiver;
-	boolean discoveredForestCave;
-	boolean discoveredGlimmeringShroomCavern;
-	boolean discoveredMagmaDepths;
-	boolean discoveredPortal;
-	boolean discoveredOtherworld;
+	private boolean discoveredTown;
+	private boolean discoveredForest;
+	private boolean discoveredRiver;
+	private boolean discoveredForestCave;
+	private boolean discoveredGlimmeringShroomCavern;
+	private boolean discoveredMagmaDepths;
+	private boolean discoveredPortal;
+	private boolean discoveredOtherworld;
 	
 	public World(){
 		discoveredTown = true;
@@ -47,13 +47,34 @@ public class World {
 		case 6:
 			discoveredOtherworld = true;
 			break;
-			
-		default:
-			break;
 		}
 		
 	}
 	
+	public boolean discoveredTown(){
+		return discoveredTown;
+	};
+	public boolean discoveredForest(){
+		return discoveredForest;
+	};
+	public boolean discoveredRiver(){
+		return discoveredRiver;
+	};
+	public boolean discoveredForestCave(){
+		return discoveredForestCave;
+	};
+	public boolean discoveredGlimmeringShroomCavern(){
+		return discoveredGlimmeringShroomCavern;
+	};
+	public boolean discoveredMagmaDepths(){
+		return discoveredMagmaDepths;
+	};
+	public boolean discoveredPortal(){
+		return discoveredPortal;
+	};
+	public boolean discoveredOtherworld(){
+		return discoveredOtherworld;
+	};
 	
 	
 }

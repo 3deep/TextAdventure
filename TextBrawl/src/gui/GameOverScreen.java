@@ -1,9 +1,6 @@
 package gui;
 
 import java.awt.Dimension;
-
-//import javax.swing.BorderFactory;
-//import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 public class GameOverScreen extends gui.MainPanel {

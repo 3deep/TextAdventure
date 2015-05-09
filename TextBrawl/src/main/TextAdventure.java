@@ -1,17 +1,20 @@
 package main;
 
 import gui.GUI;
-import world.World;
+/*import world.World;
 import chars.NPC;
-import chars.Player;
+import chars.Player;*/
 
-public final class TextAdventure {
+final class TextAdventure {
 	
-	private Player p;
-	private NPC npc;
-	private World world;
+	/*
+	 * private Player p;
+	 * private NPC npc;
+	 * private World world;
+	 */
+	
 	private static GUI gui;
-	
+		
 	public static void main (final String args[]){
 		gui = new GUI();
 	}
