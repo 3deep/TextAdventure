@@ -15,7 +15,7 @@ public abstract class Character {
 	private Armor arm;
 	private Weapon wep;
 
-	/*
+	/**
 	 * retruns the entitiy's currentHealth
 	 * @return returns currentHealth as int
 	 */
@@ -23,7 +23,7 @@ public abstract class Character {
 		return currentHealth;
 	}
 
-	/*
+	/**
 	 * retruns the entitiy's maxHealth
 	 * @return returns maxHealth as int
 	 */
@@ -31,7 +31,7 @@ public abstract class Character {
 		return maxHealth;
 	}
 	
-	/*
+	/**
 	 * retruns required str
 	 * @return returns str as int
 	 */
@@ -39,7 +39,7 @@ public abstract class Character {
 		return str;
 	}
 
-	/*
+	/**
 	 * retruns required str
 	 * @return returns str as int
 	 */
@@ -47,7 +47,7 @@ public abstract class Character {
 		return dex;
 	}
 
-	/*
+	/**
 	 * retruns required str
 	 * @return returns str as int
 	 */
@@ -55,7 +55,7 @@ public abstract class Character {
 		return cint;
 	}
 
-	/*
+	/**
 	 * retruns required str
 	 * @return returns str as int
 	 */
@@ -63,7 +63,7 @@ public abstract class Character {
 		return speed;
 	}
 
-	/*
+	/**
 	 * retruns required str
 	 * @return returns str as int
 	 */
@@ -71,7 +71,7 @@ public abstract class Character {
 		return arm;
 	}
 
-	/*
+	/**
 	 * retruns required str
 	 * @return returns str as int
 	 */
@@ -79,7 +79,7 @@ public abstract class Character {
 		return wep;
 	}
 
-	/*
+	/**
 	 * set the whole character class based on the parameters
 	 * @param maxH
 	 * maximum Health
