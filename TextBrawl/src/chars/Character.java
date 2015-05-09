@@ -14,39 +14,88 @@ public abstract class Character {
 	private int speed;
 	private Armor arm;
 	private Weapon wep;
-	
+
+	/*
+	 * retruns the entitiy's currentHealth
+	 * @return returns currentHealth as int
+	 */
 	public int currentHealthGet(){
 		return currentHealth;
 	}
-	
+
+	/*
+	 * retruns the entitiy's maxHealth
+	 * @return returns maxHealth as int
+	 */
 	public int maxHealthGet(){
 		return maxHealth;
 	}
 	
+	/*
+	 * retruns required str
+	 * @return returns str as int
+	 */
 	public int strGet(){
 		return str;
 	}
-	
+
+	/*
+	 * retruns required str
+	 * @return returns str as int
+	 */
 	public int dexGet(){
 		return dex;
 	}
-	
+
+	/*
+	 * retruns required str
+	 * @return returns str as int
+	 */
 	public int cintGet(){
 		return cint;
 	}
-	
+
+	/*
+	 * retruns required str
+	 * @return returns str as int
+	 */
 	public int speedGet(){
 		return speed;
 	}
-	
+
+	/*
+	 * retruns required str
+	 * @return returns str as int
+	 */
 	public Armor armGet(){
 		return arm;
 	}
-	
+
+	/*
+	 * retruns required str
+	 * @return returns str as int
+	 */
 	public Weapon wepGet(){
 		return wep;
 	}
-	
+
+	/*
+	 * set the whole character class based on the parameters
+	 * @param maxH
+	 * maximum Health
+	 * @param str
+	 * gives str
+	 * @param dex
+	 * gives dex
+	 * @param cint
+	 * gives int
+	 * @param speed
+	 * gives speed
+	 * @param armorRoll
+	 * roll value for the Armor
+	 * @param wepRoll
+	 * roll value for the Weapon
+	 */
 	public void allSet(int maxH, int str, int dex, int cint, int speed, int armorRoll, int wepRoll){
 		maxHealth = maxH;
 		currentHealth = maxH;
