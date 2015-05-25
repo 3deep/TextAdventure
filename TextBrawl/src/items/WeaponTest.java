@@ -1,6 +1,7 @@
 package items;
 
 import static org.junit.Assert.*;
+import items.Weapon.WType;
 
 import org.junit.Test;
 
@@ -8,7 +9,13 @@ public class WeaponTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		final int ZERO = 0;
+		final int ONE = 1;
+		Weapon testWep = new Weapon(ZERO);
+		assertWeaponEquals(testWep, new Weapon(ZERO));
+		assertEquals(testWep.typeGet(), WType.W0);
+		testWep.typeSet(ONE);
+		assertEquals(testWep.typeGet(), WType.W1);
 	}
 
 	/**

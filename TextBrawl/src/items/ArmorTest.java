@@ -1,6 +1,7 @@
 package items;
 
 import static org.junit.Assert.*;
+import items.Armor.AType;
 
 import org.junit.Test;
 
@@ -8,8 +9,15 @@ public class ArmorTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		final int ZERO = 0;
+		final int ONE= 1;
+		Armor testArm = new Armor(ZERO);
+		assertArmorEquals(testArm, new Armor(ZERO));
+		assertEquals(testArm.typeGet(), AType.NO_ARMOR);
+		testArm.typeSet(ONE);
+		assertEquals(testArm.typeGet(), AType.CLOTH_ARMOR);
 	}
+	
 	/**
 	 * tests if the Armors equal in everything dmgBlock,...
 	 * @param a1 Armor one
