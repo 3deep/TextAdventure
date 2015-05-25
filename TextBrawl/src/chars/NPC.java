@@ -11,6 +11,8 @@ public class NPC extends Character{
 	 */
 	public NPC(int roll){
 		allSet(roll, roll, roll, roll, roll, roll, roll);
+		friendly = false;
+		type = roll;
 	}
 
 	/**
