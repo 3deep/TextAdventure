@@ -1,10 +1,11 @@
-package chars;
+package htwg.de.chars;
 
 import static org.junit.Assert.*;
-import items.Armor;
-import items.ArmorTest;
-import items.Weapon;
-import items.WeaponTest;
+import htwg.de.chars.Character;
+import htwg.de.items.Armor;
+import htwg.de.items.ArmorTest;
+import htwg.de.items.Weapon;
+import htwg.de.items.WeaponTest;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -21,7 +22,7 @@ public class CharacterTest {
 	}
 	
 	@Test
-	public void allSetTest() {
+	public void testAllSet() {
 		testChar.allSet(ZERO, ZERO, ZERO, ZERO, ZERO, ZERO, ZERO);
 		assertEquals(testChar.cintGet(), ZERO);
 		assertEquals(testChar.strGet(), ZERO);
@@ -34,42 +35,42 @@ public class CharacterTest {
 	}
 	
 	@Test
-	public void armGetTest() {
+	public void testArmGet() {
 		ArmorTest.assertArmorEquals(testChar.armGet(), new Armor(ONE));
 	}
 	
 	@Test
-	public void wepGetTest() {
+	public void testWepGet() {
 		WeaponTest.assertWeaponEquals(testChar.wepGet(), new Weapon(ONE));
 	}
 
 	@Test
-	public void cintGetTest() {
+	public void testCintGet() {
 		assertEquals(testChar.cintGet(), ONE);
 	}
 
 	@Test
-	public void dexGetTest() {
+	public void testDexGet() {
 		assertEquals(testChar.dexGet(), ONE);
 	}
 
 	@Test
-	public void strGetTest() {
+	public void testStrGet() {
 		assertEquals(testChar.strGet(), ONE);
 	}
 
 	@Test
-	public void speedGetTest() {
+	public void testSpeedGet() {
 		assertEquals(testChar.speedGet(), ONE);
 	}
 
 	@Test
-	public void maxHealthGetTest() {
+	public void testMaxHealthGet() {
 		assertEquals(testChar.maxHealthGet(), ONE);
 	}
 
 	@Test
-	public void currentHealthGetTest() {
+	public void testCurrentHealthGet() {
 		assertEquals(testChar.currentHealthGet(), ONE);
 	}
 

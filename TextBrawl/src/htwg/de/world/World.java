@@ -1,4 +1,4 @@
-package world;
+package htwg.de.world;
 
 public class World {
 		

@@ -1,6 +1,8 @@
-package chars;
+package htwg.de.chars;
 
 import static org.junit.Assert.*;
+import htwg.de.chars.NPC;
+
 import org.junit.Test;
 
 public class NPCTest {
@@ -11,24 +13,24 @@ public class NPCTest {
 	NPC testNPC = new NPC(ZERO);
 	
 	@Test
-	public void isFriendlyTest() {
+	public void testIsFriendly() {
 		assertEquals(testNPC.isFriendly(), false);
 	}
 	
 	@Test
-	public void setFriendlyTest() {
+	public void testSetFriendly() {
 		testNPC.setFriendly(true);
 		assertEquals(testNPC.isFriendly(), true);
 		testNPC.setFriendly(false);
 	}
 	
 	@Test
-	public void typeGetTest() {
+	public void testTypeGet() {
 		assertEquals(testNPC.typeGet(), ZERO);
 	}
 	
 	@Test
-	public void typeSetTest() {
+	public void testTypeSet() {
 		testNPC.typeSet(ONE);
 		assertEquals(testNPC.typeGet(), ONE);
 		testNPC.typeSet(ZERO);

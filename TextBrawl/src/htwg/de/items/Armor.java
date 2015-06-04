@@ -1,4 +1,4 @@
-package items;
+package htwg.de.items;
 
 public class Armor {
 	private int reqStr;

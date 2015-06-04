@@ -1,4 +1,4 @@
-package gui;
+package htwg.de.gui;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;

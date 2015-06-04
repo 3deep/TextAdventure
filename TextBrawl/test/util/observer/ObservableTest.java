@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class OberservableTest {
+public class ObservableTest {
 	private boolean ping=false;
 	private TestObserver testObserver;
 	private Observable testObservable;

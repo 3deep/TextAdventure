@@ -1,7 +1,8 @@
-package items;
+package htwg.de.items;
 
 import static org.junit.Assert.*;
-import items.Armor.AType;
+import htwg.de.items.Armor;
+import htwg.de.items.Armor.AType;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -18,39 +19,39 @@ public class ArmorTest {
 	}
 	
 	@Test
-	public void dmgBlockGetTest() {
+	public void testDmgBlockGet() {
 		assertEquals(testArm.dmgBlockGet(), ONE);
 	}
 	
 	@Test
-	public void reqIntGetTest() {
+	public void testReqIntGet() {
 		assertEquals(testArm.reqIntGet(), ONE);
 	}
 	
 	@Test
-	public void reqDexGetTest() {
+	public void testReqDexGet() {
 		assertEquals(testArm.reqDexGet(), ONE);
 	}
 	
 	@Test
-	public void reqStrGetTest() {
+	public void testReqStrGet() {
 		assertEquals(testArm.reqStrGet(), ONE);
 	}
 	
 	@Test
-	public void typeGetTest() {
+	public void testTypeGet() {
 		assertEquals(testArm.typeGet(), AType.CLOTH_ARMOR);
 	}
 	
 	@Test
-	public void giveArmorTest() {
+	public void testGiveArmor() {
 		Armor tmp = new Armor(ONE);
 		assertArmorEquals(tmp, testArm.giveArmor());
 		assertFalse(tmp == testArm);
 	}
 	
 	@Test
-	public void typeSetTest() {
+	public void testTypeSet() {
 		testArm.typeSet(ZERO);
 		assertEquals(testArm.typeGet(), AType.NO_ARMOR);
 	}

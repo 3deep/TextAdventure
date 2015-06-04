@@ -1,4 +1,4 @@
-package chars;
+package htwg.de.chars;
 
 public class Player extends Character {
 

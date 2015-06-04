@@ -1,7 +1,8 @@
-package items;
+package htwg.de.items;
 
 import static org.junit.Assert.*;
-import items.Weapon.WType;
+import htwg.de.items.Weapon;
+import htwg.de.items.Weapon.WType;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -18,38 +19,38 @@ public class WeaponTest {
 	}
 	
 	@Test
-	public void dmgGetTest() {
+	public void testDmgGet() {
 		assertEquals(testWep.dmgGet(), ONE);
 	}
 	
 	@Test
-	public void reqDexGetTest() {
+	public void testReqDexGet() {
 		assertEquals(testWep.reqDexGet(), ONE);
 	}
 	
 	@Test
-	public void reqIntGetTest() {
+	public void testReqIntGet() {
 		assertEquals(testWep.reqIntGet(), ONE);
 	}
 	
 	@Test
-	public void reqStrGetTest() {
+	public void testReqStrGet() {
 		assertEquals(testWep.reqStrGet(), ONE);
 	}
 	
 	@Test
-	public void typeGetTest() {
+	public void testTypeGet() {
 		assertEquals(testWep.typeGet(), WType.W1);
 	}
 	
 	@Test
-	public void typeSetTest() {
+	public void testTypeSet() {
 		testWep.typeSet(ZERO);
 		assertEquals(testWep.typeGet(), WType.W0);
 	}
 	
 	@Test
-	public void giveWeaponTest() {
+	public void testGiveWeapon() {
 		Weapon tmp = new Weapon(ONE);
 		assertWeaponEquals(tmp, testWep.giveWeapon());
 		assertFalse(tmp == testWep);

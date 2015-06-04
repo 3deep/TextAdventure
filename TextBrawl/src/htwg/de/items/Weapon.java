@@ -1,4 +1,4 @@
-package items;
+package htwg.de.items;
 //first concept
 public class Weapon {
 	private int reqStr;

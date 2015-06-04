@@ -1,8 +1,8 @@
-package chars;
+package htwg.de.chars;
 
-import items.ItemGeneration;
-import items.Armor;
-import items.Weapon;
+import htwg.de.items.Armor;
+import htwg.de.items.ItemGeneration;
+import htwg.de.items.Weapon;
 
 public class Character {
 

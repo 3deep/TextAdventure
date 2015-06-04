@@ -1,9 +1,6 @@
-package main;
+package htwg.de.main;
 
-import gui.GUI;
-/*import world.World;
-import chars.NPC;
-import chars.Player;*/
+import htwg.de.gui.GUI;
 
 final class TextAdventure {
 	
