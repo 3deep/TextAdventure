@@ -17,6 +17,8 @@ final class TextAdventure {
 		
 	public static void main (final String args[]){
 		gui = new GUI();
+		if(gui == null)
+			throw new NullPointerException("No GUI found");
 	}
 
 }
