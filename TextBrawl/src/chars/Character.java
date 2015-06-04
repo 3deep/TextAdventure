@@ -4,7 +4,7 @@ import items.ItemGeneration;
 import items.Armor;
 import items.Weapon;
 
-public abstract class Character {
+public class Character {
 
 	private int currentHealth;
 	private int maxHealth;

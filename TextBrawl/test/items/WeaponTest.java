@@ -3,19 +3,56 @@ package items;
 import static org.junit.Assert.*;
 import items.Weapon.WType;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class WeaponTest {
-
+	
+	final int ZERO = 0;
+	final int ONE = 1;
+	Weapon testWep;
+	
+	@Before
+	public void setUp() {
+		testWep = new Weapon(ONE);
+	}
+	
 	@Test
-	public void test() {
-		final int ZERO = 0;
-		final int ONE = 1;
-		Weapon testWep = new Weapon(ZERO);
-		assertWeaponEquals(testWep, new Weapon(ZERO));
-		assertEquals(testWep.typeGet(), WType.W0);
-		testWep.typeSet(ONE);
+	public void dmgGetTest() {
+		assertEquals(testWep.dmgGet(), ONE);
+	}
+	
+	@Test
+	public void reqDexGetTest() {
+		assertEquals(testWep.reqDexGet(), ONE);
+	}
+	
+	@Test
+	public void reqIntGetTest() {
+		assertEquals(testWep.reqIntGet(), ONE);
+	}
+	
+	@Test
+	public void reqStrGetTest() {
+		assertEquals(testWep.reqStrGet(), ONE);
+	}
+	
+	@Test
+	public void typeGetTest() {
 		assertEquals(testWep.typeGet(), WType.W1);
+	}
+	
+	@Test
+	public void typeSetTest() {
+		testWep.typeSet(ZERO);
+		assertEquals(testWep.typeGet(), WType.W0);
+	}
+	
+	@Test
+	public void giveWeaponTest() {
+		Weapon tmp = new Weapon(ONE);
+		assertWeaponEquals(tmp, testWep.giveWeapon());
+		assertFalse(tmp == testWep);
 	}
 
 	/**

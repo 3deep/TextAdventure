@@ -15,16 +15,19 @@ public class NPCTest {
 		assertEquals(testNPC.isFriendly(), false);
 	}
 	
+	@Test
 	public void setFriendlyTest() {
 		testNPC.setFriendly(true);
 		assertEquals(testNPC.isFriendly(), true);
 		testNPC.setFriendly(false);
 	}
 	
+	@Test
 	public void typeGetTest() {
 		assertEquals(testNPC.typeGet(), ZERO);
 	}
 	
+	@Test
 	public void typeSetTest() {
 		testNPC.typeSet(ONE);
 		assertEquals(testNPC.typeGet(), ONE);

@@ -1,12 +1,6 @@
 package chars;
 
 import static org.junit.Assert.*;
-import items.Armor;
-import items.ArmorTest;
-import items.ItemGeneration;
-import items.Weapon;
-import items.WeaponTest;
-
 import org.junit.Test;
 
 public class PlayerTest {
@@ -20,12 +14,14 @@ public class PlayerTest {
 		assertEquals(testPlayer.battlesFoughtGet(), ZERO);
 	}
 	
+	@Test
 	public void battlesFoughtIncTest() {
 		int x = testPlayer.battlesFoughtGet() + 1;
 		testPlayer.battlesFoughtInc();
 		assertEquals(x, testPlayer.battlesFoughtGet());
 	}
 	
+	@Test
 	public void battlesFoughtSetTest() {
 		testPlayer.battlesFoughtSet(ONE);
 		assertEquals(testPlayer.battlesFoughtGet(), ONE);

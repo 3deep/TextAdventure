@@ -3,19 +3,56 @@ package items;
 import static org.junit.Assert.*;
 import items.Armor.AType;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class ArmorTest {
 
+	Armor testArm;
+	final int ZERO = 0;
+	final int ONE= 1;
+	
+	@Before
+	public void setUp() {
+		testArm = new Armor(ONE);
+	}
+	
 	@Test
-	public void test() {
-		final int ZERO = 0;
-		final int ONE= 1;
-		Armor testArm = new Armor(ZERO);
-		assertArmorEquals(testArm, new Armor(ZERO));
-		assertEquals(testArm.typeGet(), AType.NO_ARMOR);
-		testArm.typeSet(ONE);
+	public void dmgBlockGetTest() {
+		assertEquals(testArm.dmgBlockGet(), ONE);
+	}
+	
+	@Test
+	public void reqIntGetTest() {
+		assertEquals(testArm.reqIntGet(), ONE);
+	}
+	
+	@Test
+	public void reqDexGetTest() {
+		assertEquals(testArm.reqDexGet(), ONE);
+	}
+	
+	@Test
+	public void reqStrGetTest() {
+		assertEquals(testArm.reqStrGet(), ONE);
+	}
+	
+	@Test
+	public void typeGetTest() {
 		assertEquals(testArm.typeGet(), AType.CLOTH_ARMOR);
+	}
+	
+	@Test
+	public void giveArmorTest() {
+		Armor tmp = new Armor(ONE);
+		assertArmorEquals(tmp, testArm.giveArmor());
+		assertFalse(tmp == testArm);
+	}
+	
+	@Test
+	public void typeSetTest() {
+		testArm.typeSet(ZERO);
+		assertEquals(testArm.typeGet(), AType.NO_ARMOR);
 	}
 	
 	/**
