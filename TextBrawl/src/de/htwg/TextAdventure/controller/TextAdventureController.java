@@ -1,5 +1,7 @@
 package de.htwg.TextAdventure.controller;
 
-public class TextAdventureController {
+import de.htwg.util.observer.Observable;
+
+public class TextAdventureController extends Observable{
 
 }
