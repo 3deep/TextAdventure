@@ -64,11 +64,64 @@ public class Armor {
 	 * all information(str, etc.) should be stored in roll
 	 */
 	public Armor(int roll){
-		reqStr = roll;
-		reqDex = roll;
-		reqInt = roll;
-		dmgBlock = roll;
-		typeSet(roll);
+		int tmp = (int) Math.floor(((double)(roll / 1000)));
+		int tmp2;
+		typeSet(tmp);
+		tmp2 = roll - (tmp * 1000);
+		tmp = (int) Math.floor(((double)(tmp2 / 100)));
+		reqStr = tmp;
+		tmp2 = tmp2 - (tmp * 100);
+		tmp = (int) Math.floor(((double)(tmp2 / 10)));
+		reqDex = tmp;
+		tmp2 = tmp2 - (tmp * 10);
+		tmp = (int) Math.floor(((double)(tmp2 / 1)));
+		reqInt = tmp;
+		dmgBlock = (int)(0.6 * ((double)reqStr + (double)reqDex + (0.8 * (double)reqInt)));
+		typeToBonus();
+	}
+	
+	/**
+	 * Calculating Bonus to Armors
+	 */
+	private void typeToBonus() {
+		if(type == AType.NO_ARMOR){
+			reqStr = 0;
+			reqDex = 0;
+			reqInt = 0;
+			dmgBlock = (int) Math.round((double)dmgBlock * 0.7);
+			return;
+		}
+		
+		if(type == AType.CLOTH_ARMOR){
+			reqStr = (int)Math.round((double)reqStr * 0.3);
+			reqDex = (int)Math.round((double)reqDex * 0.7);
+			reqInt = (int)Math.round((double)reqInt * 1);
+			dmgBlock = (int)Math.round((double)dmgBlock * 1);
+			return;
+		}
+
+		if(type == AType.LIGHT_ARMOR){
+			reqStr = (int)Math.round((double)reqStr * 0.5);
+			reqDex = (int)Math.round((double)reqDex * 1);
+			reqInt = (int)Math.round((double)reqInt * 0.8);
+			dmgBlock = (int)Math.round((double)dmgBlock * 1.2);
+			return;
+		}
+
+		if(type == AType.MEDIUM_ARMOR){
+			reqStr = (int)Math.round((double)reqStr * 1);
+			reqDex = (int)Math.round((double)reqDex * 1);
+			reqInt = (int)Math.round((double)reqInt * 0.2);
+			dmgBlock = (int)Math.round((double)dmgBlock * 1.5);
+			return;
+		}
+
+		if(type == AType.HEAVY_ARMOR){
+			reqStr = (int)Math.round((double)reqStr * 1.4);
+			reqDex = (int)Math.round((double)reqDex * 0.9);
+			reqInt = (int)Math.round((double)reqInt * 0.2);
+			dmgBlock = (int)Math.round((double)dmgBlock * 2);
+		}
 	}
 	
 	/**

@@ -11,12 +11,21 @@ import de.htwg.TextAdventure.items.Armor.AType;
 public class ArmorTest {
 
 	Armor testArm;
+	Armor testArm_old;
+	Armor testArm3k;
+	Armor testArmrnd;
 	final int ZERO = 0;
-	final int ONE= 1;
+	final int ONE = 1;
+	final int ONEK = 1111;
+	final int THREEK = 3000;
+	final int RAND = 2531;
 	
 	@Before
 	public void setUp() {
-		testArm = new Armor(ONE);
+		testArm_old = new Armor(ONE);
+		testArm = new Armor(ONEK);
+		testArm3k = new Armor(THREEK);
+		testArmrnd = new Armor(RAND);
 	}
 	
 	@Test
@@ -36,7 +45,7 @@ public class ArmorTest {
 	
 	@Test
 	public void testReqStrGet() {
-		assertEquals(testArm.reqStrGet(), ONE);
+		assertEquals(testArm.reqStrGet(), ZERO);
 	}
 	
 	@Test
@@ -46,7 +55,7 @@ public class ArmorTest {
 	
 	@Test
 	public void testGiveArmor() {
-		Armor tmp = new Armor(ONE);
+		Armor tmp = new Armor(ONEK);
 		assertArmorEquals(tmp, testArm.giveArmor());
 		assertFalse(tmp == testArm);
 	}
