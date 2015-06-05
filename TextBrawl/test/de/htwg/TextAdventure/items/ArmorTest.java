@@ -73,9 +73,9 @@ public class ArmorTest {
 	 */
 	static public void assertArmorEquals(Armor a1, Armor a2){
 		if(a1 == null && a2 == null)
-			return;
+			throw new AssertionError("Armors are both null");
 		if(a1 == a2)
-			return;
+			throw new AssertionError("Same Object");
 		if(a1.dmgBlockGet() == a2.dmgBlockGet() &&
 			a1.reqDexGet() == a2.reqDexGet() &&
 			a1.reqIntGet() == a2.reqIntGet() &&
