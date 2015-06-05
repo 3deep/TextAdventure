@@ -64,9 +64,9 @@ public class WeaponTest {
 	 */
 	static public void assertWeaponEquals(Weapon w1, Weapon w2){
 		if(w1 == null && w2 == null)
-			return;
+			throw new AssertionError("Both Objects are null");
 		if(w1 == w2)
-			return;
+			throw new AssertionError("Same Object");
 		if(w1.dmgGet() == w2.dmgGet() &&
 			w1.reqDexGet() == w2.reqDexGet() &&
 			w1.reqIntGet() == w2.reqIntGet() &&
