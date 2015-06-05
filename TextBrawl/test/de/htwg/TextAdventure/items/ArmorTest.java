@@ -85,5 +85,11 @@ public class ArmorTest {
 		else throw new AssertionError("Armors don't match");
 		
 	}
+	
+	@Test
+	public void testAssertArmorEquals() {
+		//TODO
+	}
+	}
 
 }
