@@ -75,4 +75,9 @@ public class WeaponTest {
 			return;
 		else throw new AssertionError("Weapons don't match");
 	}
+	
+	@Test
+	public void testAssertWeaponEquals() {
+		//TODO
+	}
 }
