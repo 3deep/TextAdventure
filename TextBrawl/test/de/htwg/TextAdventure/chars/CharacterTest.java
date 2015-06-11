@@ -31,18 +31,18 @@ public class CharacterTest {
 		assertEquals(testChar.currentHealthGet(), ZERO);
 		assertEquals(testChar.maxHealthGet(), ZERO);
 		assertEquals(testChar.speedGet(), ZERO);
-		ArmorTest.assertArmorEquals(testChar.armGet(), new Armor(ZERO));
-		WeaponTest.assertWeaponEquals(testChar.wepGet(), new Weapon(ZERO));
+		ArmorTest.assertArmorEquals(testChar.armGet(), null);
+		WeaponTest.assertWeaponEquals(testChar.wepGet(), null);
 	}
 	
 	@Test
 	public void testArmGet() {
-		ArmorTest.assertArmorEquals(testChar.armGet(), new Armor(ONE));
+		ArmorTest.assertArmorEquals(testChar.armGet(), null);
 	}
 	
 	@Test
 	public void testWepGet() {
-		WeaponTest.assertWeaponEquals(testChar.wepGet(), new Weapon(ONE));
+		WeaponTest.assertWeaponEquals(testChar.wepGet(), null);
 	}
 
 	@Test

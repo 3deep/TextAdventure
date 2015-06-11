@@ -17,15 +17,16 @@ public class ArmorTest {
 	final int ZERO = 0;
 	final int ONE = 1;
 	final int ONEK = 1111;
-	final int THREEK = 3000;
-	final int RAND = 2531;
+	final int THREE = 3;
+	final int TWO = 2;
+	final int FIVE = 5;
 	
 	@Before
 	public void setUp() {
-		testArm_old = new Armor(ONE);
-		testArm = new Armor(ONEK);
-		testArm3k = new Armor(THREEK);
-		testArmrnd = new Armor(RAND);
+		testArm_old = new Armor(ZERO, ZERO, ZERO, ONE);
+		testArm = new Armor(ONE, ONE, ONE, ONE);
+		testArm3k = new Armor(ZERO, ZERO, ZERO, THREE);
+		testArmrnd = new Armor(TWO, FIVE, THREE, ONE);
 	}
 	
 	@Test
@@ -55,7 +56,7 @@ public class ArmorTest {
 	
 	@Test
 	public void testGiveArmor() {
-		Armor tmp = new Armor(ONEK);
+		Armor tmp = new Armor(ONE, ONE, ONE, ONE);
 		assertArmorEquals(tmp, testArm.giveArmor());
 		assertFalse(tmp == testArm);
 	}
@@ -66,6 +67,44 @@ public class ArmorTest {
 		assertEquals(testArm.typeGet(), AType.NO_ARMOR);
 	}
 	
+	@Test
+	public void testTypeToBonus() {
+		Armor A0 = new Armor(1,1,1,0);
+		Armor A1 = new Armor(1,1,1,1);
+		Armor A2 = new Armor(1,1,1,2);
+		Armor A3 = new Armor(1,1,1,3);
+		Armor A4 = new Armor(1,1,1,4);
+		Armor A5 = new Armor(1,1,1,5);
+	}
+
+	@Test
+	public void testAssertArmorEquals() {
+		assertArmorEquals(null, null);
+		try{
+			assertArmorEquals(null, testArm);
+		} catch(AssertionError e) {	}
+		try{
+			assertArmorEquals(testArm, testArm);
+		} catch(AssertionError e) {	}
+		try{
+			assertArmorEquals(testArm, testArm3k);
+		} catch(AssertionError e) {	}
+		try{
+			assertArmorEquals(new Armor(0, 1, 1, 1), new Armor(1, 1, 1, 0));
+		} catch(AssertionError e) {	}
+		try{
+			assertArmorEquals(new Armor(1, 0, 1, 1), new Armor(1, 1, 0, 1));
+		} catch(AssertionError e) {	}
+		try{
+			assertArmorEquals(new Armor(1, 1, 0, 1), new Armor(1, 0, 1, 1));
+		} catch(AssertionError e) {	}
+		try{
+			assertArmorEquals(new Armor(1, 1, 1, 0), new Armor(0, 1, 1, 1));
+		} catch(AssertionError e) {	}
+		
+	}	
+	
+	
 	/**
 	 * tests if the Armors equal in everything dmgBlock,...
 	 * @param a1 Armor one
@@ -73,7 +112,10 @@ public class ArmorTest {
 	 */
 	static public void assertArmorEquals(Armor a1, Armor a2){
 		if(a1 == null && a2 == null)
-			throw new AssertionError("Armors are both null");
+			/*throw new AssertionError("Armors are both null")*/
+			return;
+		if(a1 == null || a2 == null)
+			throw new AssertionError("One of the Armors is null");
 		if(a1 == a2)
 			throw new AssertionError("Same Object");
 		if(a1.dmgBlockGet() == a2.dmgBlockGet() &&
@@ -86,10 +128,4 @@ public class ArmorTest {
 		
 	}
 	
-	@Test
-	public void testAssertArmorEquals() {
-		//TODO
-	}
-	}
-
 }

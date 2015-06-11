@@ -1,18 +1,28 @@
 package de.htwg.TextAdventure.chars;
 
+import java.util.Random;
+
+import de.htwg.TextAdventure.items.Armor;
+import de.htwg.TextAdventure.items.Weapon;
+
 public class NPC extends Character{
 	
 	private boolean friendly;
 	private int type;
+	private Random rnd = new Random();
 	/**
 	 * creates an NPC with the corresponding roll value
 	 * @param roll
 	 * contains information for region / strength (should be random based)
 	 */
-	public NPC(int roll){
-		allSet(roll, roll, roll, roll, roll, roll, roll);
-		friendly = false;
-		type = roll;
+	public NPC(int loc){
+		Random rnd = new Random();
+		allSet(rnd.nextInt(loc), rnd.nextInt(loc), rnd.nextInt(loc), rnd.nextInt(loc), rnd.nextInt(loc), loc, loc);
+		if(loc == 1)
+			friendly = true;
+		else 
+			friendly = false;
+		type = rnd.nextInt(10);
 	}
 
 	/**
@@ -47,6 +57,16 @@ public class NPC extends Character{
 	 */
 	public void typeSet(int type) {
 		this.type = type;
+	}
+	
+	@Override
+	public Armor makeArmor(int val){
+		return new Armor(rnd.nextInt(4), rnd.nextInt(val), rnd.nextInt(val), rnd.nextInt(val));
+	}
+	
+	@Override
+	public Weapon makeWeapon(int val){
+		return new Weapon(rnd.nextInt(15), rnd.nextInt(val), rnd.nextInt(val), rnd.nextInt(val));
 	}
 	
 }

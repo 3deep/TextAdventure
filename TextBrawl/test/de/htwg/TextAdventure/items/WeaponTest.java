@@ -16,7 +16,7 @@ public class WeaponTest {
 	
 	@Before
 	public void setUp() {
-		testWep = new Weapon(ONE);
+		testWep = new Weapon(ONE, ONE, ONE, ONE);
 	}
 	
 	@Test
@@ -52,9 +52,28 @@ public class WeaponTest {
 	
 	@Test
 	public void testGiveWeapon() {
-		Weapon tmp = new Weapon(ONE);
+		Weapon tmp = new Weapon(ONE, ONE, ONE, ONE);
 		assertWeaponEquals(tmp, testWep.giveWeapon());
 		assertFalse(tmp == testWep);
+	}
+	
+	@Test
+	public void testTypeToBonus() {
+		new Weapon(1, 1, 1, 0);
+		new Weapon(1, 1, 1, 1);
+		new Weapon(1, 1, 1, 2);
+		new Weapon(1, 1, 1, 3);
+		new Weapon(1, 1, 1, 4);
+		new Weapon(1, 1, 1, 5);
+		new Weapon(1, 1, 1, 6);
+		new Weapon(1, 1, 1, 7);
+		new Weapon(1, 1, 1, 8);
+		new Weapon(1, 1, 1, 9);
+		new Weapon(1, 1, 1, 10);
+		new Weapon(1, 1, 1, 11);
+		new Weapon(1, 1, 1, 12);
+		new Weapon(1, 1, 1, 13);
+		new Weapon(1, 1, 1, 14);
 	}
 
 	/**
@@ -64,7 +83,10 @@ public class WeaponTest {
 	 */
 	static public void assertWeaponEquals(Weapon w1, Weapon w2){
 		if(w1 == null && w2 == null)
-			throw new AssertionError("Both Objects are null");
+			/*throw new AssertionError("Both Objects are null")*/
+			return;
+		if(w1 == null || w2 == null)
+			throw new AssertionError("one of the weapons is null");
 		if(w1 == w2)
 			throw new AssertionError("Same Object");
 		if(w1.dmgGet() == w2.dmgGet() &&
@@ -77,7 +99,29 @@ public class WeaponTest {
 	}
 	
 	@Test
-	public void testAssertWeaponEquals() {
-		//TODO
-	}
+	public void testAssertWeaponEquals() {		
+		assertWeaponEquals(null, null);
+	try{
+		assertWeaponEquals(null, testWep);
+	} catch(AssertionError e) {	}
+	try{
+		assertWeaponEquals(testWep, testWep);
+	} catch(AssertionError e) {	}
+	try{
+		assertWeaponEquals(testWep, new Weapon(2, 3, 5, 6));
+	} catch(AssertionError e) {	}
+	try{
+		assertWeaponEquals(new Weapon(0, 1, 1, 1), new Weapon(1, 1, 1, 0));
+	} catch(AssertionError e) {	}
+	try{
+		assertWeaponEquals(new Weapon(1, 0, 1, 1), new Weapon(1, 1, 0, 1));
+	} catch(AssertionError e) {	}
+	try{
+		assertWeaponEquals(new Weapon(1, 1, 0, 1), new Weapon(1, 0, 1, 1));
+	} catch(AssertionError e) {	}
+	try{
+		assertWeaponEquals(new Weapon(1, 1, 1, 0), new Weapon(0, 1, 1, 1));
+	} catch(AssertionError e) {	}
+	
+}	
 }

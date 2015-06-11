@@ -63,19 +63,11 @@ public class Armor {
 	 * @param roll
 	 * all information(str, etc.) should be stored in roll
 	 */
-	public Armor(int roll){
-		int tmp = (int) Math.floor(((double)(roll / 1000)));
-		int tmp2;
-		typeSet(tmp);
-		tmp2 = roll - (tmp * 1000);
-		tmp = (int) Math.floor(((double)(tmp2 / 100)));
-		reqStr = tmp;
-		tmp2 = tmp2 - (tmp * 100);
-		tmp = (int) Math.floor(((double)(tmp2 / 10)));
-		reqDex = tmp;
-		tmp2 = tmp2 - (tmp * 10);
-		tmp = (int) Math.floor(((double)(tmp2 / 1)));
-		reqInt = tmp;
+	public Armor(int reqStr, int reqDex, int reqInt, int type){
+		this.reqStr = reqStr;
+		this.reqDex = reqDex;
+		this.reqInt = reqInt;
+		typeSet(type);
 		dmgBlock = (int)(0.6 * ((double)reqStr + (double)reqDex + (0.8 * (double)reqInt)));
 		typeToBonus();
 	}
@@ -121,7 +113,9 @@ public class Armor {
 			reqDex = (int)Math.round((double)reqDex * 0.9);
 			reqInt = (int)Math.round((double)reqInt * 0.2);
 			dmgBlock = (int)Math.round((double)dmgBlock * 2);
+			return;
 		}
+		return;
 	}
 	
 	/**

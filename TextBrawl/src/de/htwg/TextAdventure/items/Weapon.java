@@ -57,18 +57,22 @@ public class Weapon {
 	private WType type;
 			
 	/**
-	 * Constructor for the Weapon
-	 * @param roll
+	 * 
+	 * @param reqStr required Str for Weapon
+	 * @param reqDex required Dex for Weapon
+	 * @param reqInt required Int for Weapon
+	 * @param type type of weapon
 	 */
-	public Weapon(int roll){
-		reqStr = roll;
-		reqDex = roll;
-		reqInt = roll;
-		dmg = roll;
-		typeSet(roll);
+	public Weapon(int reqStr, int reqDex, int reqInt, int type){
+		this.reqStr = reqStr;
+		this.reqDex = reqDex;
+		this.reqInt = reqInt;
+		typeSet(type);
+		typeToBonus();
 		
 	}
 
+	
 	/**
 	 * Getter function for reqStr
 	 * @return reqStr
@@ -125,6 +129,59 @@ public class Weapon {
 		if (tmp.typeFromVal(type) != null){
 			this.type = tmp.typeFromVal(type);}
 		else {this.type = WType.W0;}
+	}
+	
+	/**
+	 * Gives appropriate bonus to weapons
+	 * 
+	 */
+	private void typeToBonus() {
+
+		if(type == WType.W0){
+			this.dmg = (int)(0.8 * (double)reqStr + 0.3 * (double)reqDex);
+		}
+		if(type == WType.W1){
+			this.dmg = (int)(0.8 * (double)reqStr + 0.7 * (double)reqDex + 0.1 * (double)reqInt);
+		}
+		if(type == WType.W2){
+			this.dmg = (int)(0.8 * (double)reqStr + 0.8 * (double)reqDex + 0.1 * (double)reqInt);
+		}
+		if(type == WType.W3){
+			this.dmg = (int)(1 * (double)reqStr + 0.7 * (double)reqDex + 0.1 * (double)reqInt);
+		}
+		if(type == WType.W4){
+			this.dmg = (int)(1.4 * (double)reqStr + 1 * (double)reqDex + 0.1 * (double)reqInt);
+		}
+		if(type == WType.W5){
+			this.dmg = (int)(0.5 * (double)reqStr + 1.5 * (double)reqDex + 0.1 * (double)reqInt);
+		}
+		if(type == WType.W6){
+			this.dmg = (int)(0.5 * (double)reqStr + 1.1 * (double)reqDex + 0.1 * (double)reqInt);
+		}
+		if(type == WType.W7){
+			this.dmg = (int)(0.7 * (double)reqStr + 1.2 * (double)reqDex + 0.1 * (double)reqInt);
+		}
+		if(type == WType.W8){
+			this.dmg = (int)(1 * (double)reqStr + 1.2 * (double)reqDex + 0.1 * (double)reqInt);
+		}
+		if(type == WType.W9){
+			this.dmg = (int)(1.2 * (double)reqStr + 1 * (double)reqDex + 0.1 * (double)reqInt);
+		}
+		if(type == WType.W10){
+			this.dmg = (int)(1.3 * (double)reqStr + 1 * (double)reqDex + 0.1 * (double)reqInt);
+		}
+		if(type == WType.W11){
+			this.dmg = (int)(1.2 * (double)reqStr + 0.8 * (double)reqDex + 0.1 * (double)reqInt);
+		}
+		if(type == WType.W12){
+			this.dmg = (int)(1.7 * (double)reqStr + 0.6 * (double)reqDex + 0.1 * (double)reqInt);
+		}
+		if(type == WType.W13){
+			this.dmg = (int)(2 * (double)reqStr + 0.5 * (double)reqDex);
+		}
+		if(type == WType.W14){
+			this.dmg = (int)(0.1 * (double)reqStr + 0.1 * (double)reqDex + 3 * (double)reqInt);
+		}	
 	}
 	
 }

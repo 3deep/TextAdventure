@@ -1,7 +1,6 @@
 package de.htwg.TextAdventure.chars;
 
 import de.htwg.TextAdventure.items.Armor;
-import de.htwg.TextAdventure.items.ItemGeneration;
 import de.htwg.TextAdventure.items.Weapon;
 
 public class Character {
@@ -103,8 +102,26 @@ public class Character {
 		this.dex = dex;
 		this.cint = cint;
 		this.speed = speed;
-		arm = ItemGeneration.genNewArmor(armorRoll);
-		wep = ItemGeneration.genNewWeapon(wepRoll);
+		arm = makeArmor(armorRoll);
+		wep = makeWeapon(wepRoll);
+	}
+	
+	/**
+	 * Dummy function for overwrite
+	 * @param val likely the locationId or player creation token
+	 * @return Armor for this character
+	 */
+	public Armor makeArmor(int val){
+		return null;
+	}
+	
+	/**
+	 * Dummy function for overwrite
+	 * @param val likely the locationId or player creation token
+	 * @return Weapon for this character
+	 */
+	public Weapon makeWeapon(int val){
+		return null;
 	}
 	
 }
