@@ -18,10 +18,10 @@ public class NPC extends Character{
 	public NPC(int loc){
 		Random rnd = new Random();
 		allSet(rnd.nextInt(loc), rnd.nextInt(loc), rnd.nextInt(loc), rnd.nextInt(loc), rnd.nextInt(loc), loc, loc);
-		if(loc == 1)
-			friendly = true;
-		else 
-			friendly = false;
+		if(loc == 1){
+			friendly = true;}
+		else {
+			friendly = false;}
 		type = rnd.nextInt(10);
 	}
 

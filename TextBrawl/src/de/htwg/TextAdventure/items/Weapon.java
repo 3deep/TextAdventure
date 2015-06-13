@@ -184,4 +184,9 @@ public class Weapon {
 		}	
 	}
 	
+	@Override
+	public String toString() {
+		
+		return this.type.typeGet() + " with a Damage potential of " + dmgGet();
+	}
 }

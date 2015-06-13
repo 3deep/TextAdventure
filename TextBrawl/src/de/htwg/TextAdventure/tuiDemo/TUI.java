@@ -1,59 +1,44 @@
 package de.htwg.TextAdventure.tuiDemo;
 
-import java.awt.Dimension;
-import java.awt.Toolkit;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.util.Scanner;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-
+import de.htwg.TextAdventure.controller.TextAdventureController;
 import de.htwg.util.observer.IObserver;
 
 public class TUI implements IObserver{
 	
-	private static final int PANEL_WIDTH = 900;
-	private static final int PANEL_HEIGTH = 600;
 	public boolean quit = false;
+	private TextAdventureController controller;
+	Scanner sc = new Scanner(System.in);
 	
 	/**
 	 * GUI for the Game
 	 */
-	public TUI(){
-		quit = false;
-		JFrame frame = new JFrame("TextAdventure");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(PANEL_WIDTH, PANEL_HEIGTH);
-		frame.setResizable(true);
-		
-		//------------
-		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-		frame.setLocation(dim.width/2-frame.getSize().width/2, dim.height/2-frame.getSize().height/2);
-		//------------ taken from: http://stackoverflow.com/questions/2442599/how-to-set-jframe-to-appear-centered-regardless-of-the-monitor-resolution
-		
-		
-		JPanel panel = MainPanelTUI.maPanel();
-		frame.add(panel);
-		frame.setVisible(true);
-		frame.addWindowListener(new WindowAdapter(){
-            public void windowClosing(WindowEvent e){
-            	quit = true;
-            }
-        });
+	public TUI(TextAdventureController controller){
+		this.controller = controller;
+		controller.addObserver(this);
 	}
 	
 	public void printText() {
+		System.out.println(controller.getStatus());
+		controller.printPlayerStats(); //must be location
+		System.out.println("To show your stats, type \"stats\", to save your game, type \"save\", to load \"load\" and to quit, type \"quit\"");
 		
 	}
 	
-	public void sleep() {
-		System.out.println("lu1l");
-		Scanner sc = new Scanner(System.in);
-		while(sc.nextLine() == "")
-			;
-		System.out.println("lu2l");
+	public void printStats() {
+		System.out.println(controller.printPlayerStats());
+		controller.setStatus("");
+	}
+	
+	public void waitInput() {
+		printText();
+		String command = sc.nextLine();
+		if(command.equalsIgnoreCase("quit")){
+			System.out.println("You decide to quit your Adventure..");
+			System.exit(0);}
+		if(command.equalsIgnoreCase("stats"))
+			printStats();
 	}
 
 	@Override

@@ -176,4 +176,7 @@ public class Armor {
 		else {this.type = AType.NO_ARMOR;}
 	}
 	
+	public String toString() {
+		return this.type.typeGet() + " with a Damage Block potetial of " + dmgBlockGet();
+	}
 }
