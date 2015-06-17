@@ -29,33 +29,9 @@ public class World {
 	 * Discover the different Parts of the World
 	 * @param id
 	 */
-	public void discover(int id){
-		switch (id){
-		case 1:
-			discoveredRiver = true;
-			break;
-			
-		case 2:
-			discoveredForestCave = true;
-			break;
-			
-		case 3:
-			discoveredGlimmeringShroomCavern = true;
-			break;
-			
-		case 4:
-			discoveredMagmaDepths = true;
-			break;
-			
-		case 5:
-			discoveredPortal = true;
-			break;
-			
-		case 6:
-			discoveredOtherworld = true;
-			break;
-		}
-		
+	public String explore(){
+		String s = "tester";
+		return s;
 	}
 	
 	/**

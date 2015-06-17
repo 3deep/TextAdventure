@@ -1,15 +1,18 @@
 package de.htwg.TextAdventure.controller;
 
 import de.htwg.TextAdventure.chars.Player;
+import de.htwg.TextAdventure.world.World;
 import de.htwg.util.observer.Observable;
 
 public class TextAdventureController extends Observable{
 	
 	private Player player;
+	private World world;
 	private String statusMessage = "Welcome to TextAdventure";
 	
-	public TextAdventureController(Player p) {
+	public TextAdventureController(Player p, World w) {
 		player = p;
+		world = w;
 		
 	}
 	
@@ -40,6 +43,10 @@ public class TextAdventureController extends Observable{
 			//TODO GAME OVER
 			;
 		
+	}
+	
+	public String explore() {
+		return world.explore();
 	}
 
 }

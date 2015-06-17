@@ -10,6 +10,7 @@ public class TUI implements IObserver{
 	public boolean quit = false;
 	private TextAdventureController controller;
 	Scanner sc = new Scanner(System.in);
+	private boolean help = true;
 	
 	/**
 	 * GUI for the Game
@@ -22,7 +23,8 @@ public class TUI implements IObserver{
 	public void printText() {
 		System.out.println(controller.getStatus());
 		controller.printPlayerStats(); //must be location
-		System.out.println("To show your stats, type \"stats\", to save your game, type \"save\", to load \"load\" and to quit, type \"quit\"");
+		if(help)
+			System.out.println("To show your stats, type \"stats\", to save your game, type \"save\", to load \"load\" and to quit, type \"quit\"");
 		
 	}
 	
@@ -39,6 +41,12 @@ public class TUI implements IObserver{
 			System.exit(0);}
 		if(command.equalsIgnoreCase("stats"))
 			printStats();
+		if(command.equalsIgnoreCase("explore")){
+			controller.setStatus(controller.explore());
+			
+		}
+		if(command.equalsIgnoreCase("disable"))
+			this.help = false;
 	}
 
 	@Override
