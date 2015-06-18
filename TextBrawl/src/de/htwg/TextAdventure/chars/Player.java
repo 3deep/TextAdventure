@@ -4,6 +4,8 @@ import de.htwg.TextAdventure.items.Armor;
 import de.htwg.TextAdventure.items.Weapon;
 
 public class Player extends Character {
+	
+	private int playerPosition;
 
 	private int battlesFought;
 	
@@ -14,6 +16,7 @@ public class Player extends Character {
 	 */
 	public Player(int maxH, int str, int dex, int cint, int speed, int armorRoll, int wepRoll){
 		allSet(maxH, str, dex, cint, speed, armorRoll, wepRoll);
+		playerPosition = 0;
 	}
 
 	/**
@@ -48,6 +51,14 @@ public class Player extends Character {
 	@Override
 	public Armor makeArmor(int val){
 		return new Armor(0, 0, 0, 1);
+	}
+
+	public int playerPositionGet() {
+		return playerPosition;
+	}
+
+	public void playerPositionSet(int playerPosition) {
+		this.playerPosition = playerPosition;
 	}
 
 	
