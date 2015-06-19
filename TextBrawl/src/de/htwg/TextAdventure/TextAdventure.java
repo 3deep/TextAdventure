@@ -17,6 +17,8 @@ final class TextAdventure {
 		TUI tui = new TUI(new TextAdventureController(new Player(3, 3, 3, 3, 3, 3, 3), new World()));
 		while(true)
 			tui.waitInput();
+			
+		//observer for loading and saving !
 	}
 
 }
