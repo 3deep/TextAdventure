@@ -1,11 +1,14 @@
 package de.htwg.TextAdventure.controller;
 
+import de.htwg.TextAdventure.Gamestate.GameState;
+import de.htwg.TextAdventure.Gamestate.GameStateExplore;
 import de.htwg.TextAdventure.chars.Player;
 import de.htwg.TextAdventure.world.IWorld;
 import de.htwg.util.observer.Observable;
 
 public class TextAdventureController extends Observable{
 	
+	private GameState state;
 	private Player player;
 	private IWorld world;
 	private String statusMessage = "Welcome to TextAdventure";
@@ -13,7 +16,11 @@ public class TextAdventureController extends Observable{
 	public TextAdventureController(Player p, IWorld w) {
 		player = p;
 		world = w;
-		
+		state = new GameStateExplore();
+	}
+	
+	public void setState(GameState s) {
+		this.state = s;
 	}
 	
 	public String printPlayerStats() {

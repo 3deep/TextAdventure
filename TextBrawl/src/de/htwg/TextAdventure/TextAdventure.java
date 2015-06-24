@@ -7,8 +7,6 @@ import de.htwg.TextAdventure.tuiDemo.TUI;
 import de.htwg.TextAdventure.world.World;
 
 final class TextAdventure {
-	
-	private GameState state;
 		
 	public static void main (final String args[]) throws InterruptedException{
 		TUI tui = new TUI(new TextAdventureController(new Player(3, 3, 3, 3, 3, 3, 3), new World()));
