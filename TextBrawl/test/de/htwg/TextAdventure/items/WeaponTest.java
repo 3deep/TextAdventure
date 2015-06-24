@@ -12,7 +12,7 @@ public class WeaponTest {
 	
 	final int ZERO = 0;
 	final int ONE = 1;
-	Weapon testWep;
+	IWeapon testWep;
 	
 	@Before
 	public void setUp() {
@@ -52,7 +52,7 @@ public class WeaponTest {
 	
 	@Test
 	public void testGiveWeapon() {
-		Weapon tmp = new Weapon(ONE, ONE, ONE, ONE);
+		IWeapon tmp = new Weapon(ONE, ONE, ONE, ONE);
 		assertWeaponEquals(tmp, testWep.giveWeapon());
 		assertFalse(tmp == testWep);
 	}
@@ -81,7 +81,7 @@ public class WeaponTest {
 	 * @param w1 Weapon one
 	 * @param w2 Weapon two
 	 */
-	static public void assertWeaponEquals(Weapon w1, Weapon w2){
+	static public void assertWeaponEquals(IWeapon w1, IWeapon w2){
 		if(w1 == null && w2 == null)
 			/*throw new AssertionError("Both Objects are null")*/
 			return;

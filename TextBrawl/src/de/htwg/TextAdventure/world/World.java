@@ -2,7 +2,7 @@ package de.htwg.TextAdventure.world;
 
 import java.util.Random;
 
-public class World {
+public class World implements IWorld {
 		
 	private boolean discoveredTown;
 	private boolean discoveredForest;
@@ -29,10 +29,10 @@ public class World {
 		rnd = new Random();
 	}
 	
-	/**
-	 * Discover the different Parts of the World
-	 * @param id
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.world.IWorld#explore(int)
 	 */
+	@Override
 	public String explore(int playerPosition){
 		String s = "";
 		int tmp = rnd.nextInt(10);
@@ -121,59 +121,59 @@ public class World {
 		return s;
 	}
 	
-	/**
-	 * Getter for discoveredTown
-	 * @return discoveredTown
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.world.IWorld#discoveredTown()
 	 */
+	@Override
 	public boolean discoveredTown(){
 		return discoveredTown;
 	};
-	/**
-	 * Getter for discoveredForest
-	 * @return discoveredForest
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.world.IWorld#discoveredForest()
 	 */
+	@Override
 	public boolean discoveredForest(){
 		return discoveredForest;
 	};
-	/**
-	 * Getter for discoveredRiver
-	 * @return discoveredRiver
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.world.IWorld#discoveredRiver()
 	 */
+	@Override
 	public boolean discoveredRiver(){
 		return discoveredRiver;
 	};
-	/**
-	 * Getter for discoveredForestCave
-	 * @return discoveredForestCave
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.world.IWorld#discoveredForestCave()
 	 */
+	@Override
 	public boolean discoveredForestCave(){
 		return discoveredForestCave;
 	};
-	/**
-	 * Getter for discoveredGlimmeringShroomCavern
-	 * @return discoveredGlimmeringShroomCavern
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.world.IWorld#discoveredGlimmeringShroomCavern()
 	 */
+	@Override
 	public boolean discoveredGlimmeringShroomCavern(){
 		return discoveredGlimmeringShroomCavern;
 	};
-	/**
-	 * Getter for discoveredMagmaDepths
-	 * @return discoveredMagmaDepths
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.world.IWorld#discoveredMagmaDepths()
 	 */
+	@Override
 	public boolean discoveredMagmaDepths(){
 		return discoveredMagmaDepths;
 	};
-	/**
-	 * Getter for discoveredPortal
-	 * @return discoveredPortal
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.world.IWorld#discoveredPortal()
 	 */
+	@Override
 	public boolean discoveredPortal(){
 		return discoveredPortal;
 	};
-	/**
-	 * Getter for discoveredOtherworld
-	 * @return discoveredOtherworld
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.world.IWorld#discoveredOtherworld()
 	 */
+	@Override
 	public boolean discoveredOtherworld(){
 		return discoveredOtherworld;
 	};

@@ -15,7 +15,7 @@ public class CharacterTest {
 
 	final int ZERO = 0;
 	final int ONE = 1;
-	Character testChar = new Character();
+	ICharacter testChar = new Character();
 	
 	@Before
 	public void setUp() {

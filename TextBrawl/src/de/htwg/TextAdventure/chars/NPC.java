@@ -3,9 +3,11 @@ package de.htwg.TextAdventure.chars;
 import java.util.Random;
 
 import de.htwg.TextAdventure.items.Armor;
+import de.htwg.TextAdventure.items.IArmor;
+import de.htwg.TextAdventure.items.IWeapon;
 import de.htwg.TextAdventure.items.Weapon;
 
-public class NPC extends Character{
+public class NPC extends Character implements INPC{
 	
 	private boolean friendly;
 	private int type;
@@ -25,47 +27,51 @@ public class NPC extends Character{
 		type = rnd.nextInt(10);
 	}
 
-	/**
-	 * Checks for friendliness of NPC (true => NPC is a shop)
-	 * @return friendly
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.INPC#isFriendly()
 	 */
+	@Override
 	public boolean isFriendly() {
 		return friendly;
 	}
 
-	/**
-	 * Set function for boolean friendly
-	 * @param friendly
-	 * true/false
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.INPC#setFriendly(boolean)
 	 */
+	@Override
 	public void setFriendly(boolean friendly) {
 		this.friendly = friendly;
 	}
 
-	/**
-	 * Returns the type of NPC (TODO: implement different types of NPC / Characters)
-	 * @return int => will probably become enum
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.INPC#typeGet()
 	 */
+	@Override
 	public int typeGet() {
 		return type;
 	}
 
-	/**
-	 * Set function for the type
-	 * @param type
-	 * type of NPC
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.INPC#typeSet(int)
 	 */
+	@Override
 	public void typeSet(int type) {
 		this.type = type;
 	}
 	
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.INPC#makeArmor(int)
+	 */
 	@Override
-	public Armor makeArmor(int val){
+	public IArmor makeArmor(int val){
 		return new Armor(rnd.nextInt(4), rnd.nextInt(val), rnd.nextInt(val), rnd.nextInt(val));
 	}
 	
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.INPC#makeWeapon(int)
+	 */
 	@Override
-	public Weapon makeWeapon(int val){
+	public IWeapon makeWeapon(int val){
 		return new Weapon(rnd.nextInt(15), rnd.nextInt(val), rnd.nextInt(val), rnd.nextInt(val));
 	}
 	

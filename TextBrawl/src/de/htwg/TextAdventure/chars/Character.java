@@ -1,9 +1,9 @@
 package de.htwg.TextAdventure.chars;
 
-import de.htwg.TextAdventure.items.Armor;
-import de.htwg.TextAdventure.items.Weapon;
+import de.htwg.TextAdventure.items.IArmor;
+import de.htwg.TextAdventure.items.IWeapon;
 
-public class Character {
+public class Character implements ICharacter {
 
 	private int currentHealth;
 	private int maxHealth;
@@ -11,90 +11,77 @@ public class Character {
 	private int dex;
 	private int cint;
 	private int speed;
-	private Armor arm;
-	private Weapon wep;
+	private IArmor arm;
+	private IWeapon wep;
 
-	/**
-	 * retruns the entitiy's currentHealth
-	 * @return returns currentHealth as int
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.ICharacter#currentHealthGet()
 	 */
+	@Override
 	public int currentHealthGet(){
 		return currentHealth;
 	}
 
-	/**
-	 * retruns the entitiy's maxHealth
-	 * @return returns maxHealth as int
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.ICharacter#maxHealthGet()
 	 */
+	@Override
 	public int maxHealthGet(){
 		return maxHealth;
 	}
 	
-	/**
-	 * retruns required str
-	 * @return returns str as int
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.ICharacter#strGet()
 	 */
+	@Override
 	public int strGet(){
 		return str;
 	}
 
-	/**
-	 * retruns required str
-	 * @return returns str as int
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.ICharacter#dexGet()
 	 */
+	@Override
 	public int dexGet(){
 		return dex;
 	}
 
-	/**
-	 * retruns required str
-	 * @return returns str as int
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.ICharacter#cintGet()
 	 */
+	@Override
 	public int cintGet(){
 		return cint;
 	}
 
-	/**
-	 * retruns required str
-	 * @return returns str as int
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.ICharacter#speedGet()
 	 */
+	@Override
 	public int speedGet(){
 		return speed;
 	}
 
-	/**
-	 * retruns required str
-	 * @return returns str as int
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.ICharacter#armGet()
 	 */
-	public Armor armGet(){
+	@Override
+	public IArmor armGet(){
 		return arm;
 	}
 
-	/**
-	 * retruns required str
-	 * @return returns str as int
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.ICharacter#wepGet()
 	 */
-	public Weapon wepGet(){
+	@Override
+	public IWeapon wepGet(){
 		return wep;
 	}
 
-	/**
-	 * set the whole character class based on the parameters
-	 * @param maxH
-	 * maximum Health
-	 * @param str
-	 * gives str
-	 * @param dex
-	 * gives dex
-	 * @param cint
-	 * gives int
-	 * @param speed
-	 * gives speed
-	 * @param armorRoll
-	 * roll value for the Armor
-	 * @param wepRoll
-	 * roll value for the Weapon
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.ICharacter#allSet(int, int, int, int, int, int, int)
 	 */
+	@Override
 	public void allSet(int maxH, int str, int dex, int cint, int speed, int armorRoll, int wepRoll){
 		maxHealth = maxH;
 		currentHealth = maxH;
@@ -106,21 +93,19 @@ public class Character {
 		wep = makeWeapon(wepRoll);
 	}
 	
-	/**
-	 * Dummy function for overwrite
-	 * @param val likely the locationId or player creation token
-	 * @return Armor for this character
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.ICharacter#makeArmor(int)
 	 */
-	public Armor makeArmor(int val){
+	@Override
+	public IArmor makeArmor(int val){
 		return null;
 	}
 	
-	/**
-	 * Dummy function for overwrite
-	 * @param val likely the locationId or player creation token
-	 * @return Weapon for this character
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.ICharacter#makeWeapon(int)
 	 */
-	public Weapon makeWeapon(int val){
+	@Override
+	public IWeapon makeWeapon(int val){
 		return null;
 	}
 	

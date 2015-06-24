@@ -10,10 +10,10 @@ import de.htwg.TextAdventure.items.Armor.AType;
 
 public class ArmorTest {
 
-	Armor testArm;
-	Armor testArm_old;
-	Armor testArm3k;
-	Armor testArmrnd;
+	IArmor testArm;
+	IArmor testArm_old;
+	IArmor testArm3k;
+	IArmor testArmrnd;
 	final int ZERO = 0;
 	final int ONE = 1;
 	final int ONEK = 1111;
@@ -56,7 +56,7 @@ public class ArmorTest {
 	
 	@Test
 	public void testGiveArmor() {
-		Armor tmp = new Armor(ONE, ONE, ONE, ONE);
+		IArmor tmp = new Armor(ONE, ONE, ONE, ONE);
 		assertArmorEquals(tmp, testArm.giveArmor());
 		assertFalse(tmp == testArm);
 	}
@@ -69,12 +69,12 @@ public class ArmorTest {
 	
 	@Test
 	public void testTypeToBonus() {
-		Armor A0 = new Armor(1,1,1,0);
-		Armor A1 = new Armor(1,1,1,1);
-		Armor A2 = new Armor(1,1,1,2);
-		Armor A3 = new Armor(1,1,1,3);
-		Armor A4 = new Armor(1,1,1,4);
-		Armor A5 = new Armor(1,1,1,5);
+		IArmor A0 = new Armor(1,1,1,0);
+		IArmor A1 = new Armor(1,1,1,1);
+		IArmor A2 = new Armor(1,1,1,2);
+		IArmor A3 = new Armor(1,1,1,3);
+		IArmor A4 = new Armor(1,1,1,4);
+		IArmor A5 = new Armor(1,1,1,5);
 	}
 
 	@Test
@@ -110,7 +110,7 @@ public class ArmorTest {
 	 * @param a1 Armor one
 	 * @param a2 Armor two
 	 */
-	static public void assertArmorEquals(Armor a1, Armor a2){
+	static public void assertArmorEquals(IArmor a1, IArmor a2){
 		if(a1 == null && a2 == null)
 			/*throw new AssertionError("Armors are both null")*/
 			return;

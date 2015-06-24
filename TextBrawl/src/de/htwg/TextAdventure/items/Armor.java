@@ -1,6 +1,6 @@
 package de.htwg.TextAdventure.items;
 
-public class Armor {
+public class Armor implements IArmor {
 	private int reqStr;
 	private int reqDex;
 	private int reqInt;
@@ -118,57 +118,58 @@ public class Armor {
 		return;
 	}
 	
-	/**
-	 * Getter function for str
-	 * @return str
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IArmor#reqStrGet()
 	 */
+	@Override
 	public int reqStrGet(){
 		return reqStr;
 	}
 
-	/**
-	 * Getter function for dex
-	 * @return dex
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IArmor#reqDexGet()
 	 */
+	@Override
 	public int reqDexGet(){
 		return reqDex;
 	}
 
-	/**
-	 * Getter function for int
-	 * @return int
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IArmor#reqIntGet()
 	 */
+	@Override
 	public int reqIntGet(){
 		return reqInt;
 	}
 
-	/**
-	 * Getter function for dmgBlock
-	 * @return dmgBlock
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IArmor#dmgBlockGet()
 	 */
+	@Override
 	public int dmgBlockGet(){
 		return dmgBlock;
 	}
 
-	/**
-	 * Getter function for the armor
-	 * @return armor (self)
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IArmor#giveArmor()
 	 */
-	public Armor giveArmor(){
+	@Override
+	public IArmor giveArmor(){
 		return this;
 	}
 
-	/**
-	 * Getter function for AType
-	 * @return type
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IArmor#typeGet()
 	 */
+	@Override
 	public AType typeGet() {
 		return type;
 	}
 
-	/**
-	 * Sets the type to corresponding numerical Value
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IArmor#typeSet(int)
 	 */
+	@Override
 	public void typeSet(int type) {
 		AType tmp = AType.NO_ARMOR;
 		if (tmp.typeFromVal(type) != null){
@@ -176,6 +177,10 @@ public class Armor {
 		else {this.type = AType.NO_ARMOR;}
 	}
 	
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IArmor#toString()
+	 */
+	@Override
 	public String toString() {
 		return this.type.typeGet() + " with a Damage Block potetial of " + dmgBlockGet();
 	}

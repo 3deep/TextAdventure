@@ -10,7 +10,7 @@ public class PlayerTest {
 
 	final int ZERO = 0;
 	final int ONE = 1;
-	Player testPlayer = new Player(ZERO, ZERO, ZERO, ZERO, ZERO, ZERO, ZERO);
+	IPlayer testPlayer = new Player(ZERO, ZERO, ZERO, ZERO, ZERO, ZERO, ZERO);
 	
 	@Test
 	public void testBattlesFoughtGet() {

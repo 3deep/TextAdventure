@@ -12,8 +12,8 @@ public class NPCTest {
 
 	final int ZERO = 0;
 	final int ONE = 1;
-	NPC testNPC;
-	NPC testNPC2 = new NPC(2);
+	INPC testNPC;
+	INPC testNPC2 = new NPC(2);
 	
 	@Before
 	public void setUp() {

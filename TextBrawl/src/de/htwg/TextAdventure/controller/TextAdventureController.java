@@ -1,16 +1,16 @@
 package de.htwg.TextAdventure.controller;
 
 import de.htwg.TextAdventure.chars.Player;
-import de.htwg.TextAdventure.world.World;
+import de.htwg.TextAdventure.world.IWorld;
 import de.htwg.util.observer.Observable;
 
 public class TextAdventureController extends Observable{
 	
 	private Player player;
-	private World world;
+	private IWorld world;
 	private String statusMessage = "Welcome to TextAdventure";
 	
-	public TextAdventureController(Player p, World w) {
+	public TextAdventureController(Player p, IWorld w) {
 		player = p;
 		world = w;
 		

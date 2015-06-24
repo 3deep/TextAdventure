@@ -1,6 +1,6 @@
 package de.htwg.TextAdventure.items;
 //first concept
-public class Weapon {
+public class Weapon implements IWeapon {
 	private int reqStr;
 	private int reqDex;
 	private int reqInt;
@@ -73,57 +73,58 @@ public class Weapon {
 	}
 
 	
-	/**
-	 * Getter function for reqStr
-	 * @return reqStr
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IWeapon#reqStrGet()
 	 */
+	@Override
 	public int reqStrGet(){
 		return reqStr;
 	}
 
-	/**
-	 * Getter function for reqDex
-	 * @return reqDex
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IWeapon#reqDexGet()
 	 */
+	@Override
 	public int reqDexGet(){
 		return reqDex;
 	}
 
-	/**
-	 * Getter function for reqInt
-	 * @return reqInt
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IWeapon#reqIntGet()
 	 */
+	@Override
 	public int reqIntGet(){
 		return reqInt;	
 	}
 
-	/**
-	 * Getter function for dmg
-	 * @return dmg
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IWeapon#dmgGet()
 	 */
+	@Override
 	public int dmgGet(){
 		return dmg;
 	}
 
-	/**
-	 * Getter function for weapon
-	 * @return weapon (self)
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IWeapon#giveWeapon()
 	 */
-	public Weapon giveWeapon(){
+	@Override
+	public IWeapon giveWeapon(){
 		return this;
 	}
 
-	/**
-	 * Getter function for WType
-	 * @return type
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IWeapon#typeGet()
 	 */
+	@Override
 	public WType typeGet() {
 		return type;
 	}
 
-	/**
-	 * Sets the type to corresponding numerical Value
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IWeapon#typeSet(int)
 	 */
+	@Override
 	public void typeSet(int type) {
 		WType tmp = WType.W0;
 		if (tmp.typeFromVal(type) != null){
@@ -184,6 +185,9 @@ public class Weapon {
 		}	
 	}
 	
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.items.IWeapon#toString()
+	 */
 	@Override
 	public String toString() {
 		

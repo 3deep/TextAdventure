@@ -1,9 +1,11 @@
 package de.htwg.TextAdventure.chars;
 
 import de.htwg.TextAdventure.items.Armor;
+import de.htwg.TextAdventure.items.IArmor;
+import de.htwg.TextAdventure.items.IWeapon;
 import de.htwg.TextAdventure.items.Weapon;
 
-public class Player extends Character {
+public class Player extends Character implements IPlayer {
 	
 	private int playerPosition;
 
@@ -19,44 +21,58 @@ public class Player extends Character {
 		playerPosition = 0;
 	}
 
-	/**
-	 * Gives the number of fought Battles
-	 * @return int of fought battles (lvlup system?)
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.IPlayer#battlesFoughtGet()
 	 */
+	@Override
 	public int battlesFoughtGet() {
 		return battlesFought;
 	}
 
-	/**
-	 * Set function for battles fought
-	 * @param battlesFought
-	 * maybe for load function
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.IPlayer#battlesFoughtSet(int)
 	 */
+	@Override
 	public void battlesFoughtSet(int battlesFought) {
 		this.battlesFought = battlesFought;
 	}
 	
-	/**
-	 * increments the battlesFought value => called after each battle
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.IPlayer#battlesFoughtInc()
 	 */
+	@Override
 	public void battlesFoughtInc() {
 		this.battlesFought++;
 	}
 	
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.IPlayer#makeWeapon(int)
+	 */
 	@Override
-	public Weapon makeWeapon(int val){
+	public IWeapon makeWeapon(int val){
 		return new Weapon(this.strGet(), this.dexGet(), this.cintGet(), 0);
 	}
 
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.IPlayer#makeArmor(int)
+	 */
 	@Override
-	public Armor makeArmor(int val){
+	public IArmor makeArmor(int val){
 		return new Armor(0, 0, 0, 1);
 	}
 
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.IPlayer#playerPositionGet()
+	 */
+	@Override
 	public int playerPositionGet() {
 		return playerPosition;
 	}
 
+	/* (non-Javadoc)
+	 * @see de.htwg.TextAdventure.chars.IPlayer#playerPositionSet(int)
+	 */
+	@Override
 	public void playerPositionSet(int playerPosition) {
 		this.playerPosition = playerPosition;
 	}
