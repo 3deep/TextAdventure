@@ -56,7 +56,7 @@ public class World implements IWorld {
 					s = "You explore the town, yet you don't find anything new. Maybe you should head outside into the Forest to have an Adventure.";
 					break;
 				}
-				else if (playerPosition == 1){
+				else if (playerPosition == 4){
 					if(discoveredForestCave && discoveredRiver)
 						break;
 					else if(discoveredForestCave){
@@ -78,10 +78,10 @@ public class World implements IWorld {
 							s += "a Lake with a River";
 						}
 					}
-				} else if(playerPosition == 2){
+				} else if(playerPosition == 6){
 					discoveredGlimmeringShroomCavern = true;
 					s += "a Cavern full of glowing Shrooms. You start to get an odd feeling about this Cave.";
-				} else if (playerPosition == 4){
+				} else if (playerPosition == 7){
 					if(discoveredPortal && discoveredMagmaDepths){
 						s += "nothing. You already know everything here.";
 						break;
@@ -105,7 +105,7 @@ public class World implements IWorld {
 							s+= "a Portal. You can feel Otherworldy presences, tearing at Reality.\nYou are somehow convinced, that your quest is almost over";
 						}
 					}
-				} else if(playerPosition == 6){
+				} else if(playerPosition == 9){
 					discoveredOtherworld = true;
 					s = "By accident you tumble into the Portal. A short time later, you awaken in a distorted Landspace.\nYou can feel the strong presence of demons.";
 				} else {

@@ -34,5 +34,25 @@ public interface INPC {
 	public abstract IArmor makeArmor(int val);
 
 	public abstract IWeapon makeWeapon(int val);
+	
+	public abstract int currentHealthGet();
+
+	public abstract int maxHealthGet();
+
+	public abstract int strGet();
+
+	public abstract int dexGet();
+
+	public abstract int cintGet();
+
+	public abstract int speedGet();
+
+	public abstract IWeapon wepGet();
+
+	public abstract IArmor armGet();
+	
+	public abstract boolean checkHealth();
+	
+	public abstract void damage(int dmg);
 
 }

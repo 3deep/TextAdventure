@@ -1,6 +1,5 @@
 package de.htwg.TextAdventure;
 
-import de.htwg.TextAdventure.Gamestate.GameState;
 import de.htwg.TextAdventure.chars.Player;
 import de.htwg.TextAdventure.controller.TextAdventureController;
 import de.htwg.TextAdventure.tuiDemo.TUI;

@@ -3,7 +3,7 @@ package de.htwg.TextAdventure.chars;
 import de.htwg.TextAdventure.items.IArmor;
 import de.htwg.TextAdventure.items.IWeapon;
 
-public class Character implements ICharacter {
+public abstract class Character {
 
 	private int currentHealth;
 	private int maxHealth;
@@ -17,7 +17,6 @@ public class Character implements ICharacter {
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.chars.ICharacter#currentHealthGet()
 	 */
-	@Override
 	public int currentHealthGet(){
 		return currentHealth;
 	}
@@ -25,7 +24,6 @@ public class Character implements ICharacter {
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.chars.ICharacter#maxHealthGet()
 	 */
-	@Override
 	public int maxHealthGet(){
 		return maxHealth;
 	}
@@ -33,7 +31,6 @@ public class Character implements ICharacter {
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.chars.ICharacter#strGet()
 	 */
-	@Override
 	public int strGet(){
 		return str;
 	}
@@ -41,7 +38,6 @@ public class Character implements ICharacter {
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.chars.ICharacter#dexGet()
 	 */
-	@Override
 	public int dexGet(){
 		return dex;
 	}
@@ -49,7 +45,6 @@ public class Character implements ICharacter {
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.chars.ICharacter#cintGet()
 	 */
-	@Override
 	public int cintGet(){
 		return cint;
 	}
@@ -57,7 +52,6 @@ public class Character implements ICharacter {
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.chars.ICharacter#speedGet()
 	 */
-	@Override
 	public int speedGet(){
 		return speed;
 	}
@@ -65,7 +59,6 @@ public class Character implements ICharacter {
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.chars.ICharacter#armGet()
 	 */
-	@Override
 	public IArmor armGet(){
 		return arm;
 	}
@@ -73,7 +66,6 @@ public class Character implements ICharacter {
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.chars.ICharacter#wepGet()
 	 */
-	@Override
 	public IWeapon wepGet(){
 		return wep;
 	}
@@ -81,7 +73,6 @@ public class Character implements ICharacter {
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.chars.ICharacter#allSet(int, int, int, int, int, int, int)
 	 */
-	@Override
 	public void allSet(int maxH, int str, int dex, int cint, int speed, int armorRoll, int wepRoll){
 		maxHealth = maxH;
 		currentHealth = maxH;
@@ -96,7 +87,6 @@ public class Character implements ICharacter {
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.chars.ICharacter#makeArmor(int)
 	 */
-	@Override
 	public IArmor makeArmor(int val){
 		return null;
 	}
@@ -104,9 +94,25 @@ public class Character implements ICharacter {
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.chars.ICharacter#makeWeapon(int)
 	 */
-	@Override
 	public IWeapon makeWeapon(int val){
 		return null;
+	}
+	
+	
+	/**
+	 * checks if player health =< 0
+	 * @return true if above
+	 */
+	public boolean checkHealth() {
+		return (currentHealth > 0);
+	}	
+	
+	/**
+	 * checks if player health =< 0
+	 * @return true if above
+	 */
+	public void damage(int dmg) {
+		currentHealth = currentHealth - dmg;
 	}
 	
 }
