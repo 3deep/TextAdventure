@@ -1,7 +1,5 @@
 package de.htwg.TextAdventure.controller;
 
-import java.util.Scanner;
-
 import de.htwg.TextAdventure.battle.Arena;
 import de.htwg.TextAdventure.battle.IArena;
 import de.htwg.TextAdventure.chars.IPlayer;

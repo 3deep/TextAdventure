@@ -474,3 +474,12 @@ INFO main de.htwg.TextAdventure.UI.TUI - So far you have discovered: Town, Fores
 INFO main de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
 INFO main de.htwg.TextAdventure.UI.TUI - That is probably a stupid idea here.
 INFO main de.htwg.TextAdventure.UI.TUI - You decide to quit your Adventure..
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+Heal yourself with "rest", but only in Town or at the Lake/River
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - I don't know the command asd.
+INFO main de.htwg.TextAdventure.UI.TUI - You decide to quit your Adventure..
