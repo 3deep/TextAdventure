@@ -1,4 +1,4 @@
-package de.htwg.TextAdventure.gui;
+package de.htwg.TextAdventure.UI;
 
 import java.awt.Color;
 import java.awt.Dimension;

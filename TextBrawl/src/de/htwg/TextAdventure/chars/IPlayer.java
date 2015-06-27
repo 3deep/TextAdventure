@@ -51,4 +51,20 @@ public interface IPlayer {
 	
 	public abstract void damage(int dmg);
 
+	public abstract void giveArmor(IArmor armor);
+
+	public abstract void giveWeapon(IWeapon weapon);
+	
+	public abstract void rest();
+	
+	public abstract void incStr();
+	
+	public abstract void inccint();
+	
+	public abstract void incDex();
+	
+	public abstract void incSpeed();
+	
+	public abstract void incHP();
+
 }

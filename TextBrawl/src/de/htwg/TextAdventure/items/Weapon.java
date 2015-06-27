@@ -72,6 +72,9 @@ public class Weapon implements IWeapon {
 		
 	}
 
+	public String getName() {
+		return type.type;
+	}
 	
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.items.IWeapon#reqStrGet()
@@ -185,12 +188,18 @@ public class Weapon implements IWeapon {
 		}	
 	}
 	
+	public boolean notFists() {
+		return this.type != WType.W0;
+	}
+	
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.items.IWeapon#toString()
 	 */
 	@Override
 	public String toString() {
-		
-		return this.type.typeGet() + " with a Damage potential of " + dmgGet();
+		if(type != WType.W0)
+			return this.type.typeGet() + " with a Damage potential of " + dmgGet() + "\nIt requires " + reqStr + " Strength, " + reqDex + " Dexterity and " + reqInt + " Intelligence to equip.";
+		else
+			return this.type.typeGet() + " with a Damage potential of " + dmgGet() + "\nIt requires nothing to use your Fists";
 	}
 }

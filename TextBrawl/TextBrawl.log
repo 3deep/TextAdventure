@@ -1,0 +1,476 @@
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - I don't know the command asd.
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - I don't know the command asd.
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - I don't know the command asd.
+INFO main de.htwg.TextAdventure.UI.TUI - Where do you want to go?
+INFO main de.htwg.TextAdventure.UI.TUI - So far you have discovered: Town, Forest.
+INFO main de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO main de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Short Bow and is wearing a Cloth Armor.
+You are on 3 out of 3 health points.
+Your enemy has 2 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (2-0)and did 1 points of Damage.
+(2-0)The enemy swings their Short Bow (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (2-1)but couldn't do any damage.
+(2-1)The enemy swings their Short Bow (0-0)and did 1 points of Damage.
+You are on 2 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (2-1)but couldn't do any damage.
+(2-0)The enemy swings their Short Bow (0-0)but couldn't do any damage.
+You are on 2 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (2-1)but couldn't do any damage.
+(2-0)The enemy swings their Short Bow (0-0)but couldn't do any damage.
+You are on 2 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (2-1)but couldn't do any damage.
+(2-1)The enemy swings their Short Bow (0-0)and did 1 points of Damage.
+You are on 1 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (2-1)and did 1 points of Damage.
+
+INFO main de.htwg.TextAdventure.UI.TUI - You managed to beat your foe.
+INFO main de.htwg.TextAdventure.UI.TUI - You have 1 out of 3 HP
+Strength: 3
+Dexterity: 3
+Intelligence: 3
+Speed: 3
+Weapon: Fists with a Damage potential of 3
+It requires nothing to use your Fists
+Armor: Cloth Armor with a Damage Block potetial of 0.
+It requires 0 Strength, 0 Dexterity and 0 Intelligence to wear
+On your journey you defeated 1 foe!
+INFO main de.htwg.TextAdventure.UI.TUI - You decide to quit your Adventure..
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - I don't know the command asd.
+INFO main de.htwg.TextAdventure.UI.TUI - I don't know the command asd.
+INFO main de.htwg.TextAdventure.UI.TUI - You decide to quit your Adventure..
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - You have 3 out of 3 HP
+Strength: 3
+Dexterity: 3
+Intelligence: 3
+Speed: 3
+Weapon: Fists with a Damage potential of 3
+It requires nothing to use your Fists
+Armor: Cloth Armor with a Damage Block potetial of 0.
+It requires 0 Strength, 0 Dexterity and 0 Intelligence to wear
+On your journey you defeated 0 foes!
+INFO main de.htwg.TextAdventure.UI.TUI - Where do you want to go?
+INFO main de.htwg.TextAdventure.UI.TUI - So far you have discovered: Town, Forest.
+INFO main de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO main de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Fists and is wearing a Cloth Armor.
+You are on 3 out of 3 health points.
+Your enemy has 2 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - I don't understand the command atatckNow what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (2-1)and did 1 points of Damage.
+(0-0)The enemy swings their Fists (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (2-1)but couldn't do any damage.
+(0-0)The enemy swings their Fists (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (2-1)but couldn't do any damage.
+(0-0)The enemy swings their Fists (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (2-0)but couldn't do any damage.
+(0-0)The enemy swings their Fists (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (2-0)and did 2 points of Damage.
+
+INFO main de.htwg.TextAdventure.UI.TUI - You managed to beat your foe.
+INFO main de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Cloth Armor with a Damage Block potetial of 2.
+It requires 0 Strength, 1 Dexterity and 2 Intelligence to wear
+
+INFO main de.htwg.TextAdventure.UI.TUI - What do you want to take?
+INFO main de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Cloth Armor with a Damage Block potetial of 2.
+It requires 0 Strength, 1 Dexterity and 2 Intelligence to wear
+
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - Where do you want to go?
+INFO main de.htwg.TextAdventure.UI.TUI - So far you have discovered: Town, Forest.
+INFO main de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO main de.htwg.TextAdventure.UI.TUI - There is nothing here to be inspected!
+INFO main de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Crossbow and is wearing a Light Armor.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 1 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (1-0)and did 1 points of Damage.
+
+INFO main de.htwg.TextAdventure.UI.TUI - You managed to beat your foe.
+INFO main de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Crossbow with a Damage potential of 1
+It requires 0 Strength, 1 Dexterity and 2 Intelligence to equip.
+Light Armor with a Damage Block potetial of 1.
+It requires 0 Strength, 1 Dexterity and 1 Intelligence to wear
+
+INFO main de.htwg.TextAdventure.UI.TUI - What do you want to take?
+INFO main de.htwg.TextAdventure.UI.TUI - You equip your new Light Armor.
+INFO main de.htwg.TextAdventure.UI.TUI - I don't know the command status.
+INFO main de.htwg.TextAdventure.UI.TUI - You have 3 out of 3 HP
+Strength: 3
+Dexterity: 3
+Intelligence: 3
+Speed: 3
+Weapon: Fists with a Damage potential of 3
+It requires nothing to use your Fists
+Armor: Light Armor with a Damage Block potetial of 1.
+It requires 0 Strength, 1 Dexterity and 1 Intelligence to wear
+On your journey you defeated 1 foe!
+INFO main de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Short Bow and is wearing a Light Armor.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (1-0)and did 1 points of Damage.
+(4-3)The enemy swings their Short Bow (1-0)and did 3 points of Damage.
+You have fallen in valiant battle.
+
+GAME OVER
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - Where do you want to go?
+INFO main de.htwg.TextAdventure.UI.TUI - So far you have discovered: Town, Forest.
+INFO main de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO main de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Magic Wand and is wearing a Medium Armor.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (5-3)but couldn't do any damage.
+(3-0)The enemy swings their Magic Wand (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (5-3)but couldn't do any damage.
+(3-1)The enemy swings their Magic Wand (0-0)and did 1 points of Damage.
+You are on 2 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (5-3)but couldn't do any damage.
+(3-1)The enemy swings their Magic Wand (0-0)and did 1 points of Damage.
+You are on 1 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (5-1)and did 1 points of Damage.
+(3-1)The enemy swings their Magic Wand (0-0)and did 1 points of Damage.
+You have fallen in valiant battle.
+
+GAME OVER
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - Where do you want to go?
+INFO main de.htwg.TextAdventure.UI.TUI - So far you have discovered: Town, Forest.
+INFO main de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO main de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Crossbow and is wearing a Light Armor.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (2-0)but couldn't do any damage.
+(1-0)The enemy swings their Crossbow (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (2-1)and did 1 points of Damage.
+(1-0)The enemy swings their Crossbow (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 2 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (2-1)but couldn't do any damage.
+(1-0)The enemy swings their Crossbow (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 2 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (2-0)and did 2 points of Damage.
+
+INFO main de.htwg.TextAdventure.UI.TUI - You managed to beat your foe.
+INFO main de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Crossbow with a Damage potential of 1
+It requires 1 Strength, 0 Dexterity and 1 Intelligence to equip.
+Light Armor with a Damage Block potetial of 2.
+It requires 0 Strength, 3 Dexterity and 1 Intelligence to wear
+
+INFO main de.htwg.TextAdventure.UI.TUI - What do you want to take?
+INFO main de.htwg.TextAdventure.UI.TUI - You equip your new Light Armor.
+INFO main de.htwg.TextAdventure.UI.TUI - There is nothing here to be inspected!
+INFO main de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO main de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO main de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO main de.htwg.TextAdventure.UI.TUI - You discovered a Lake with a River
+INFO main de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO main de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Long Bow and is wearing a No Armor.
+You are on 3 out of 3 health points.
+Your enemy has 2 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - I don't understand the command atackNow what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (1-0)but couldn't do any damage.
+(5-2)The enemy swings their Long Bow (2-1)and did 1 points of Damage.
+You are on 2 out of 3 health points.
+Your enemy has 2 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (1-0)and did 2 points of Damage.
+
+INFO main de.htwg.TextAdventure.UI.TUI - You managed to beat your foe.
+INFO main de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Long Bow with a Damage potential of 5
+It requires 2 Strength, 3 Dexterity and 3 Intelligence to equip.
+
+INFO main de.htwg.TextAdventure.UI.TUI - What do you want to take?
+INFO main de.htwg.TextAdventure.UI.TUI - You equip your new Long Bow.
+INFO main de.htwg.TextAdventure.UI.TUI - You have 2 out of 3 HP
+Strength: 3
+Dexterity: 3
+Intelligence: 3
+Speed: 3
+Weapon: Long Bow with a Damage potential of 5
+It requires 2 Strength, 3 Dexterity and 3 Intelligence to equip.
+Armor: Light Armor with a Damage Block potetial of 2.
+It requires 0 Strength, 3 Dexterity and 1 Intelligence to wear
+On your journey you defeated 2 foes!
+INFO main de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO main de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Long Bow.
+Your enemy wields a Zweihander and is wearing a No Armor.
+You are on 2 out of 3 health points.
+Your enemy has 1 out of 1 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (5-0)You swing your Long Bow (1-0)but couldn't do any damage.
+(5-0)The enemy swings their Zweihander (2-1)but couldn't do any damage.
+You are on 2 out of 3 health points.
+Your enemy has 1 out of 1 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (5-2)You swing your Long Bow (1-0)and did 2 points of Damage.
+
+INFO main de.htwg.TextAdventure.UI.TUI - You managed to beat your foe.
+INFO main de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Zweihander with a Damage potential of 5
+It requires 3 Strength, 1 Dexterity and 2 Intelligence to equip.
+
+INFO main de.htwg.TextAdventure.UI.TUI - What do you want to take?
+INFO main de.htwg.TextAdventure.UI.TUI - You equip your new Zweihander.
+INFO main de.htwg.TextAdventure.UI.TUI - You have 2 out of 3 HP
+Strength: 3
+Dexterity: 3
+Intelligence: 3
+Speed: 3
+Weapon: Zweihander with a Damage potential of 5
+It requires 3 Strength, 1 Dexterity and 2 Intelligence to equip.
+Armor: Light Armor with a Damage Block potetial of 2.
+It requires 0 Strength, 3 Dexterity and 1 Intelligence to wear
+On your journey you defeated 3 foes!
+INFO main de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO main de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO main de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Zweihander.
+Your enemy wields a Long Sword and is wearing a No Armor.
+You are on 2 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (5-2)You swing your Zweihander (0-0)and did 2 points of Damage.
+(2-1)The enemy swings their Long Sword (2-1)but couldn't do any damage.
+You are on 2 out of 3 health points.
+Your enemy has 1 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (5-3)You swing your Zweihander (0-0)and did 3 points of Damage.
+
+INFO main de.htwg.TextAdventure.UI.TUI - You managed to beat your foe.
+INFO main de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Long Sword with a Damage potential of 2
+It requires 2 Strength, 0 Dexterity and 0 Intelligence to equip.
+
+INFO main de.htwg.TextAdventure.UI.TUI - You decide to quit your Adventure..
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+Heal yourself with "rest", but only in Town or at the Lake/River
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - Where do you want to go?
+INFO main de.htwg.TextAdventure.UI.TUI - So far you have discovered: Town, Forest.
+INFO main de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO main de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Halberd and is wearing a Light Armor.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 1 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (4-0)and did 2 points of Damage.
+
+INFO main de.htwg.TextAdventure.UI.TUI - You managed to beat your foe.
+INFO main de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Halberd with a Damage potential of 3
+It requires 0 Strength, 3 Dexterity and 1 Intelligence to equip.
+Light Armor with a Damage Block potetial of 4.
+It requires 2 Strength, 2 Dexterity and 2 Intelligence to wear
+
+INFO main de.htwg.TextAdventure.UI.TUI - What do you want to take?
+INFO main de.htwg.TextAdventure.UI.TUI - You equip your new Light Armor.
+INFO main de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO main de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Long Bow and is wearing a Medium Armor.
+You are on 3 out of 3 health points.
+Your enemy has 2 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (5-0)and did 1 points of Damage.
+(3-1)The enemy swings their Long Bow (4-0)and did 1 points of Damage.
+You are on 2 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (5-1)but couldn't do any damage.
+(3-0)The enemy swings their Long Bow (4-3)but couldn't do any damage.
+You are on 2 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (5-1)but couldn't do any damage.
+(3-0)The enemy swings their Long Bow (4-3)but couldn't do any damage.
+You are on 2 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (5-3)but couldn't do any damage.
+(3-2)The enemy swings their Long Bow (4-1)and did 1 points of Damage.
+You are on 1 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (5-2)but couldn't do any damage.
+(3-0)The enemy swings their Long Bow (4-2)but couldn't do any damage.
+You are on 1 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (5-1)and did 1 points of Damage.
+
+INFO main de.htwg.TextAdventure.UI.TUI - You managed to beat your foe.
+INFO main de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Long Bow with a Damage potential of 3
+It requires 2 Strength, 2 Dexterity and 1 Intelligence to equip.
+Medium Armor with a Damage Block potetial of 5.
+It requires 3 Strength, 2 Dexterity and 0 Intelligence to wear
+
+INFO main de.htwg.TextAdventure.UI.TUI - What do you want to take?
+INFO main de.htwg.TextAdventure.UI.TUI - You equip your new Medium Armor.
+INFO main de.htwg.TextAdventure.UI.TUI - I don't know the command rest.
+INFO main de.htwg.TextAdventure.UI.TUI - You decide to quit your Adventure..
+INFO main de.htwg.TextAdventure.UI.TUI - Welcome to TextAdventure
+INFO main de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+Heal yourself with "rest", but only in Town or at the Lake/River
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - You relax for a bit, Healing yourself back to full health.
+INFO main de.htwg.TextAdventure.UI.TUI - Where do you want to go?
+INFO main de.htwg.TextAdventure.UI.TUI - So far you have discovered: Town, Forest.
+INFO main de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO main de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO main de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Dagger and is wearing a Cloth Armor.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (1-0)and did 2 points of Damage.
+(3-1)The enemy swings their Dagger (0-0)and did 1 points of Damage.
+You are on 2 out of 3 health points.
+Your enemy has 1 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - I don't understand the command attaclNow what are you going to do? Attack or Flee?
+INFO main de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (1-0)and did 2 points of Damage.
+
+INFO main de.htwg.TextAdventure.UI.TUI - You managed to beat your foe.
+INFO main de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Dagger with a Damage potential of 3
+It requires 3 Strength, 1 Dexterity and 3 Intelligence to equip.
+Cloth Armor with a Damage Block potetial of 1.
+It requires 1 Strength, 0 Dexterity and 1 Intelligence to wear
+
+INFO main de.htwg.TextAdventure.UI.TUI - What do you want to take?
+INFO main de.htwg.TextAdventure.UI.TUI - You equip your new Cloth Armor.
+INFO main de.htwg.TextAdventure.UI.TUI - You have 2 out of 3 HP
+Strength: 3
+Dexterity: 3
+Intelligence: 3
+Speed: 3
+Weapon: Fists with a Damage potential of 3
+It requires nothing to use your Fists
+Armor: Cloth Armor with a Damage Block potetial of 1.
+It requires 1 Strength, 0 Dexterity and 1 Intelligence to wear
+On your journey you defeated 1 foe!
+INFO main de.htwg.TextAdventure.UI.TUI - Where do you want to go?
+INFO main de.htwg.TextAdventure.UI.TUI - So far you have discovered: Town, Forest.
+INFO main de.htwg.TextAdventure.UI.TUI - You head back to Town to rest.
+INFO main de.htwg.TextAdventure.UI.TUI - You relax for a bit, Healing yourself back to full health.
+INFO main de.htwg.TextAdventure.UI.TUI - Where do you want to go?
+INFO main de.htwg.TextAdventure.UI.TUI - So far you have discovered: Town, Forest.
+INFO main de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO main de.htwg.TextAdventure.UI.TUI - That is probably a stupid idea here.
+INFO main de.htwg.TextAdventure.UI.TUI - You decide to quit your Adventure..

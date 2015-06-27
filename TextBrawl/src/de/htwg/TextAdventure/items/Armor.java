@@ -72,6 +72,10 @@ public class Armor implements IArmor {
 		typeToBonus();
 	}
 	
+	public String getName() {
+		return type.type;
+	}
+	
 	/**
 	 * Calculating Bonus to Armors
 	 */
@@ -177,11 +181,18 @@ public class Armor implements IArmor {
 		else {this.type = AType.NO_ARMOR;}
 	}
 	
+	public boolean notNoArmor() {
+		return this.type != AType.NO_ARMOR;
+	}
+	
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.items.IArmor#toString()
 	 */
 	@Override
 	public String toString() {
-		return this.type.typeGet() + " with a Damage Block potetial of " + dmgBlockGet();
+		if(this.type != AType.NO_ARMOR)
+			return this.type.typeGet() + " with a Damage Block potetial of " + dmgBlockGet() + ".\nIt requires " + reqStr + " Strength, " + reqDex + " Dexterity and " + reqInt + " Intelligence to wear";
+		else
+			return this.type.typeGet() + " with a Damage Block potetial of " + dmgBlockGet() + ".\nIt requires no Stats to not wear anything";
 	}
 }

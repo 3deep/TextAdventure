@@ -76,6 +76,51 @@ public class Player extends Character implements IPlayer {
 	public void playerPositionSet(int playerPosition) {
 		this.playerPosition = playerPosition;
 	}
+	
+	@Override
+	public void giveArmor(IArmor armor){
+		arm = armor;
+	}
+	
+	@Override
+	public void giveWeapon(IWeapon weapon){
+		wep = weapon;
+	}
+	
+	@Override
+	public void rest() {
+		currentHealth = maxHealth;
+	}
+
+	@Override
+	public void incStr() {
+		str++;
+		
+	}
+
+	@Override
+	public void inccint() {
+		cint++;
+		
+	}
+
+	@Override
+	public void incDex() {
+		dex++;
+		
+	}
+
+	@Override
+	public void incSpeed() {
+		speed++;
+		
+	}
+
+	@Override
+	public void incHP() {
+		maxHealth += 2;
+		
+	}
 
 	
 }

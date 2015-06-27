@@ -5,14 +5,14 @@ import de.htwg.TextAdventure.items.IWeapon;
 
 public abstract class Character {
 
-	private int currentHealth;
-	private int maxHealth;
-	private int str;
-	private int dex;
-	private int cint;
-	private int speed;
-	private IArmor arm;
-	private IWeapon wep;
+	protected int currentHealth;
+	protected int maxHealth;
+	protected int str;
+	protected int dex;
+	protected int cint;
+	protected int speed;
+	protected IArmor arm;
+	protected IWeapon wep;
 
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.chars.ICharacter#currentHealthGet()
@@ -84,19 +84,9 @@ public abstract class Character {
 		wep = makeWeapon(wepRoll);
 	}
 	
-	/* (non-Javadoc)
-	 * @see de.htwg.TextAdventure.chars.ICharacter#makeArmor(int)
-	 */
-	public IArmor makeArmor(int val){
-		return null;
-	}
+	public abstract IArmor makeArmor(int val);
 	
-	/* (non-Javadoc)
-	 * @see de.htwg.TextAdventure.chars.ICharacter#makeWeapon(int)
-	 */
-	public IWeapon makeWeapon(int val){
-		return null;
-	}
+	public abstract IWeapon makeWeapon(int val);
 	
 	
 	/**

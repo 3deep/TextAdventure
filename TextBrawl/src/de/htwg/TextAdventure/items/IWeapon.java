@@ -46,5 +46,9 @@ public interface IWeapon {
 	public abstract void typeSet(int type);
 
 	public abstract String toString();
+	
+	public abstract String getName();
+	
+	public abstract boolean notFists();
 
 }

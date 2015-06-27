@@ -64,7 +64,7 @@ public class NPC extends Character implements INPC{
 	 */
 	@Override
 	public IArmor makeArmor(int val){
-		return new Armor(rnd.nextInt(4), rnd.nextInt(val), rnd.nextInt(val), rnd.nextInt(val));
+		return new Armor(rnd.nextInt(val), rnd.nextInt(val), rnd.nextInt(val), rnd.nextInt(4));
 	}
 	
 	/* (non-Javadoc)
@@ -72,7 +72,7 @@ public class NPC extends Character implements INPC{
 	 */
 	@Override
 	public IWeapon makeWeapon(int val){
-		return new Weapon(rnd.nextInt(15), rnd.nextInt(val), rnd.nextInt(val), rnd.nextInt(val));
+		return new Weapon(rnd.nextInt(val), rnd.nextInt(val), rnd.nextInt(val), rnd.nextInt(15));
 	}
 	
 }

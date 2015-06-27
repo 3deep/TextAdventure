@@ -5,8 +5,11 @@ import java.util.Scanner;
 
 import de.htwg.TextAdventure.chars.INPC;
 import de.htwg.TextAdventure.chars.IPlayer;
+import de.htwg.util.observer.Observable;
 
-public class Arena implements IArena {
+public class Arena extends Observable implements IArena {
+	
+	String fightStatus;
 	
 	public Arena(){
 		;
@@ -17,14 +20,17 @@ public class Arena implements IArena {
 	 */
 	@Override
 	public boolean battle(IPlayer player, INPC enemy) {
-		System.out.println("The Battle starts!");
+		fightStatus = "The Battle starts!\n";
+		fightStatus += "You ready your " + player.wepGet().getName() + ".\n";
+		fightStatus += "Your enemy wields a " + enemy.wepGet().getName() + " and is wearing a " + enemy.armGet().getName() + ".\n";
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		while(player.checkHealth() && enemy.checkHealth()){
-			System.out.println("You are on " + player.currentHealthGet() + " out of " + player.maxHealthGet() + "health points");
-			System.out.println("Your enemy has " + enemy.currentHealthGet() + " out of " + enemy.maxHealthGet() + " health points");
+			fightStatus += "You are on " + player.currentHealthGet() + " out of " + player.maxHealthGet() + " health points.\n";
+			fightStatus += "Your enemy has " + enemy.currentHealthGet() + " out of " + enemy.maxHealthGet() + " health points.\n";
 			while(true){
-				System.out.println("Now what are you going to do? Attack or Flee?");
+				fightStatus += "Now what are you going to do? Attack or Flee?";
+				notifyObservers();
 				String tmp = scan.nextLine();
 					if(tmp.equalsIgnoreCase("attack")){
 						attack(player, enemy);
@@ -35,70 +41,92 @@ public class Arena implements IArena {
 							return false;
 						}
 						else
-							System.out.println("You were too slow. The enemy denies you any chance at escape.");
+							fightStatus = "You were too slow. The enemy denies you any chance at escape.";
 					}
 					else 
-						System.out.println("I don't understand the command " + tmp);
+						fightStatus = "I don't understand the command " + tmp;
 			}
 			if(!player.checkHealth()){
-				System.out.println("You have fallen in valiant battle.\n\nGAME OVER");
+				fightStatus += "You have fallen in valiant battle.\n\nGAME OVER";
+				notifyObservers();
 				System.exit(0);
 			}
 		}
+		notifyObservers();
 		return true;
 	}
 
 	private void attack(IPlayer player, INPC enemy) {
 		Random rnd = new Random();
 		int dmg;
+		int atPlayer;
+		int atEnemy;
+		int blockPlayer;
+		int blockEnemy;
+		if(player.wepGet().dmgGet() == 0)
+			atPlayer = 0;
+		else
+			atPlayer = rnd.nextInt(player.wepGet().dmgGet());
+		if(enemy.wepGet().dmgGet() == 0)
+			atEnemy = 0;
+		else
+			atEnemy = rnd.nextInt(enemy.wepGet().dmgGet());
+		if(player.armGet().dmgBlockGet() == 0)
+			blockPlayer = 0;
+		else 
+			blockPlayer = rnd.nextInt(player.armGet().dmgBlockGet());
+		if(enemy.armGet().dmgBlockGet() == 0)
+			blockEnemy = 0;
+		else 
+			blockEnemy = rnd.nextInt(enemy.armGet().dmgBlockGet());
 		if(enemy.speedGet() <= player.speedGet()){
-			if(enemy.armGet().dmgBlockGet() != 0)
-				dmg = (rnd.nextInt(player.wepGet().dmgGet())) - (rnd.nextInt(enemy.armGet().dmgBlockGet()));
-			else
-				dmg = rnd.nextInt(player.wepGet().dmgGet());
+			dmg = (atPlayer) - (blockEnemy);
+			fightStatus = "(" + player.wepGet().dmgGet() + "-" + atPlayer + ")" + "You swing your " + player.wepGet().getName() + " ";
+			fightStatus += "(" + enemy.armGet().dmgBlockGet() + "-" + blockEnemy + ")";
 			if(dmg > 0){
 				enemy.damage(dmg);
-				System.out.println("You did " + dmg + " points of Damage.");
+				fightStatus += "and did " + dmg + " points of Damage.\n";
 			}
 			else
-				System.out.println("You couldn't do any damage.");
+				fightStatus +="but couldn't do any damage.\n";
 			if(!enemy.checkHealth())
 				return;
-			if(player.armGet().dmgBlockGet() != 0)
-				dmg = (rnd.nextInt(enemy.wepGet().dmgGet())) - (rnd.nextInt(player.armGet().dmgBlockGet()));
-			else
-				dmg = rnd.nextInt(player.wepGet().dmgGet());
+			dmg = (atEnemy) - (blockPlayer);
+			fightStatus += "(" + enemy.wepGet().dmgGet() + "-" + atEnemy + ")" + "The enemy swings their " + enemy.wepGet().getName() + " ";
+			fightStatus += "(" + player.armGet().dmgBlockGet() + "-" + blockPlayer + ")";
 			if(dmg > 0){
 				player.damage(dmg);
-				System.out.println("The enemy did " + dmg + " points of Damage.");
+				fightStatus += "and did " + dmg + " points of Damage.\n";
 			}
 			else
-				System.out.println("The enemy couldn't do any damage.");
+				fightStatus += "but couldn't do any damage.\n";
 		}
 		else {
-			if(player.armGet().dmgBlockGet() != 0)
-				dmg = (rnd.nextInt(enemy.wepGet().dmgGet())) - (rnd.nextInt(player.armGet().dmgBlockGet()));
-			else
-				dmg = rnd.nextInt(enemy.wepGet().dmgGet());
+			dmg = (atEnemy) - (atPlayer);
+			fightStatus = "(" + enemy.wepGet().dmgGet() + "-" + atEnemy + ")" + "The enemy swings their " + enemy.wepGet().getName() + " ";
+			fightStatus += "(" + player.armGet().dmgBlockGet() + "-" + blockPlayer + ")";
 			if(dmg > 0){
 				player.damage(dmg);
-				System.out.println("The enemy did " + dmg + " points of Damage.");
+				fightStatus += "and did " + dmg + " points of Damage.\n";
 			}
 			else
-				System.out.println("The enemy couldn't do any damage.");
+				fightStatus += "but couldn't do any damage.\n";
 			if(!player.checkHealth())
 				return;
-			if(enemy.armGet().dmgBlockGet() != 0)
-				dmg = (rnd.nextInt(player.wepGet().dmgGet())) - (rnd.nextInt(enemy.armGet().dmgBlockGet()));
-			else
-				dmg = rnd.nextInt(player.wepGet().dmgGet());
+			dmg = (atPlayer) - (blockEnemy);
+			fightStatus += "(" + player.wepGet().dmgGet() + "-" + atPlayer + ")" + "You swing your " + player.wepGet().getName() + " ";
+			fightStatus += "(" + enemy.armGet().dmgBlockGet() + "-" + blockEnemy + ")";
 			if(dmg > 0){
 				enemy.damage(dmg);
-				System.out.println("You did " + dmg + " points of Damage.");
+				fightStatus += "and did " + dmg + " points of Damage.\n";
 			}
 			else
-				System.out.println("You couldn't do any damage.");
+				fightStatus +="but couldn't do any damage.\n";
 		}
+	}
+	
+	public String getFightStatus() {
+		return fightStatus;
 	}
 
 

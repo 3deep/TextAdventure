@@ -1,18 +1,25 @@
 package de.htwg.TextAdventure.controller;
 
+import java.util.Scanner;
+
 import de.htwg.TextAdventure.battle.Arena;
 import de.htwg.TextAdventure.battle.IArena;
 import de.htwg.TextAdventure.chars.IPlayer;
 import de.htwg.TextAdventure.chars.NPC;
+import de.htwg.TextAdventure.items.IArmor;
+import de.htwg.TextAdventure.items.IWeapon;
 import de.htwg.TextAdventure.world.IWorld;
+import de.htwg.util.observer.IObserver;
 import de.htwg.util.observer.Observable;
 
-public class TextAdventureController extends Observable{
+public class TextAdventureController extends Observable implements IObserver{
 	
 	private IPlayer player;
 	private IWorld world;
 	private String statusMessage = "Welcome to TextAdventure";
 	private IArena arena;
+	private IWeapon lootW;
+	private IArmor lootA;
 	
 	/**
 	 * Creates the Controller
@@ -23,6 +30,7 @@ public class TextAdventureController extends Observable{
 		player = p;
 		world = w;
 		arena = new Arena();
+		arena.addObserver(this);
 	}
 	
 	/**
@@ -36,9 +44,12 @@ public class TextAdventureController extends Observable{
 		s += "Dexterity: " + player.dexGet() + "\n";
 		s += "Intelligence: " + player.cintGet() + "\n";
 		s += "Speed: " + player.speedGet() + "\n";
-		s += "Armor: " + player.wepGet().toString() + "\n";
-		s += "Weapon: " + player.armGet().toString() + "\n";
-		s += "On your journey you defeated " + player.battlesFoughtGet() + " foes!";
+		s += "Weapon: " + player.wepGet().toString() + "\n";
+		s += "Armor: " + player.armGet().toString() + "\n";
+		if(player.battlesFoughtGet() == 1)
+			s += "On your journey you defeated " + player.battlesFoughtGet() + " foe!";
+		else
+			s += "On your journey you defeated " + player.battlesFoughtGet() + " foes!";
 		return s;
 		
 	}
@@ -71,13 +82,70 @@ public class TextAdventureController extends Observable{
 	  * fight fierce battle
 	  */
 	private void battle() {
-		if(arena.battle(player, new NPC(player.playerPositionGet())))
+		NPC enemy = new NPC(player.playerPositionGet());
+		while(enemy.currentHealthGet() == 0)
+			enemy = new NPC(player.playerPositionGet());
+		if(arena.battle(player, enemy)){
+			lootW = enemy.wepGet();
+			lootA = enemy.armGet();
 			setStatus("You managed to beat your foe.");
+			player.battlesFoughtInc();
+		}
 		else
 			setStatus("You ran from battle");
 	}
 	
+	/**
+	 * Inspects the loot on the ground (if loot is there)
+	 */
+	public void inspectLoot() {
+		String tmp = "";
+		if(lootW != null && lootW.notFists() )
+			tmp += lootW.toString() + "\n";
+		if(lootA != null && lootA.notNoArmor() )
+			tmp += lootA.toString() + "\n";
+		if(!tmp.equals(""))
+			setStatus("On the Ground you see:\n" + tmp);
+		else
+			setStatus("There is nothing here to be inspected!");
+	}
 	
+	/**
+	 * Replaces the characters Armor with the one on the Ground
+	 */
+	public void takeArmor() {
+		if(player.cintGet() < lootA.reqIntGet() || player.dexGet() < lootA.reqDexGet() || player.strGet() < lootA.reqStrGet()) {
+			setStatus("You can't equip that. You don't have the necessary Stats for that!");
+			return;
+		}
+		else {
+			player.giveArmor(lootA);
+			setStatus("You equip your new " + lootA.getName() + ".");
+		}
+		lootW = null;
+		lootA = null;
+	}
+
+	/**
+	 * Replaces the characters Weapon with the one on the Ground
+	 */
+	public void takeWeapon() {
+		if(player.cintGet() < lootW.reqIntGet() || player.dexGet() < lootW.reqDexGet() || player.strGet() < lootW.reqStrGet()) {
+			setStatus("You can't equip that. You don't have the necessary Stats for that!");
+			return;
+		}
+		else {
+			player.giveWeapon(lootW);
+			setStatus("You equip your new " + lootW.getName() + ".");
+		}
+		lootW = null;
+		lootA = null;
+	}
+	
+	/**
+	 * Where the player is going
+	 * @param location where to
+	 */
 	public void goTo(String location){
 		if(location.equalsIgnoreCase("town")){
 			player.playerPositionSet(0);
@@ -134,7 +202,7 @@ public class TextAdventureController extends Observable{
 		setStatus("I don't know where " + location + " is. Just pick one of the discovered locations.");
 	}
 	
-	/*
+	/**
 	 * Tells the player what he already discovered
 	 */
 	public void areas() {
@@ -153,6 +221,25 @@ public class TextAdventureController extends Observable{
 			s += ", Otherworld";
 		s +=".";
 		setStatus(s);
+	}
+	
+	/**
+	 * Checks if you can rest at current position and heals the player if possible
+	 */
+	public void rest() {
+		if(player.playerPositionGet() == 0 || player.playerPositionGet() == 5){
+			player.rest();
+			setStatus("You relax for a bit, Healing yourself back to full health.");
+		}
+		else
+			setStatus("That is probably a stupid idea here.");
+	}
+
+	@Override
+	public void update() {
+
+		setStatus(arena.getFightStatus());
+		notifyObservers();
 	}
 
 }
