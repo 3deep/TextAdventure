@@ -19,7 +19,7 @@ public class Arena extends Observable implements IArena {
 	 * @see de.htwg.TextAdventure.battle.IArena#battle(de.htwg.TextAdventure.chars.IPlayer, de.htwg.TextAdventure.chars.INPC)
 	 */
 	@Override
-	public boolean battle(IPlayer player, INPC enemy) {
+	public int battle(IPlayer player, INPC enemy) {
 		fightStatus = "The Battle starts!\n";
 		fightStatus += "You ready your " + player.wepGet().getName() + ".\n";
 		fightStatus += "Your enemy wields a " + enemy.wepGet().getName() + " and is wearing a " + enemy.armGet().getName() + ".\n";
@@ -38,7 +38,7 @@ public class Arena extends Observable implements IArena {
 					}
 					else if(tmp.equalsIgnoreCase("flee")){
 						if(player.speedGet() > enemy.speedGet()){
-							return false;
+							return 0;
 						}
 						else
 							fightStatus = "You were too slow. The enemy denies you any chance at escape.";
@@ -49,11 +49,12 @@ public class Arena extends Observable implements IArena {
 			if(!player.checkHealth()){
 				fightStatus += "You have fallen in valiant battle.\n\nGAME OVER";
 				notifyObservers();
-				System.exit(0);
+				player.dead();
+				return 2;
 			}
 		}
 		notifyObservers();
-		return true;
+		return 1;
 	}
 
 	private void attack(IPlayer player, INPC enemy) {

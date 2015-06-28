@@ -30,6 +30,7 @@ public class TUI implements IObserver{
 					+ "\nTo explore the area you are currently in, type \"explore\", to go to an already explored Area, type \"goto\" and then the Area, list of discovered Areas is \"areas\""
 					+ "\nIn battles attack the enemy with your current weapon with \"attack\" and flee by typing \"flee\"."
 					+ "\nAfter a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with \"take\", you can inspect them before with \"inspect\"."
+					+ "\nIf you have any unspent Skillpoints (see in stats) you can upgrade your stats with \"upgrade\" (HP gives you 2 HP per point)."
 					+ "\nHeal yourself with \"rest\", but only in Town or at the Lake/River"
 					+ "\nTo show this Text (all available commands), type \"help\"");
 			help = false;
@@ -43,45 +44,67 @@ public class TUI implements IObserver{
 	
 	public void waitInput() {
 		printText();
-		String command = sc.nextLine();
-		if(command.equalsIgnoreCase("quit")){
-			logger.info("You decide to quit your Adventure..");
-			System.exit(0);
-		}
-		else if(command.equalsIgnoreCase("stats"))
-			printStats();
-		else if(command.equalsIgnoreCase("explore"))
-			controller.explore();
-		else if(command.equalsIgnoreCase("help")){
-			this.help = true;
-		}
-		else if(command.equalsIgnoreCase("goto")) {
-			logger.info("Where do you want to go?");
-			controller.areas();
-			update();
-			command = sc.nextLine();
-			controller.goTo(command);
-		} 
-		else if(command.equalsIgnoreCase("areas"))
-			controller.areas();
+		if(controller.playerIsAlive()){
+			String command = sc.nextLine();
+			if(command.equalsIgnoreCase("quit")){
+				logger.info("You decide to quit your Adventure..");
+				System.exit(0);
+			}
+			else if(command.equalsIgnoreCase("stats"))
+				printStats();
+			else if(command.equalsIgnoreCase("explore"))
+				controller.explore();
+			else if(command.equalsIgnoreCase("help")){
+				this.help = true;
+			}
+			else if(command.equalsIgnoreCase("goto")) {
+				logger.info("Where do you want to go?");
+				controller.areas();
+				update();
+				command = sc.nextLine();
+				controller.goTo(command);
+			} 
+			else if(command.equalsIgnoreCase("areas"))
+				controller.areas();
 		
-		else if(command.equalsIgnoreCase("inspect"))
-			controller.inspectLoot();
+			else if(command.equalsIgnoreCase("inspect"))
+				controller.inspectLoot();
 		
-		else if(command.equalsIgnoreCase("take")){
-			logger.info("What do you want to take?");
-			command = sc.nextLine();
-			if(command.equalsIgnoreCase("Armor"))
-				controller.takeArmor();
-			else if(command.equalsIgnoreCase("Weapon"))
-				controller.takeWeapon();
+			else if(command.equalsIgnoreCase("take")){
+				logger.info("What do you want to take?");
+				command = sc.nextLine();
+				if(command.equalsIgnoreCase("Armor"))
+					controller.takeArmor();
+				else if(command.equalsIgnoreCase("Weapon"))
+					controller.takeWeapon();
+				else
+					logger.info("There is no such thing here.");
+			}
+			else if(command.equalsIgnoreCase("rest"))
+				controller.rest();
+			else if(command.equalsIgnoreCase("upgrade")){
+				logger.info("Which Stat do you want to upgrade? Str, Dex, Int, Speed or HP?");
+				command = sc.nextLine();
+				controller.upgrade(command);
+			}
 			else
-				logger.info("There is no such thing here.");
+				controller.setStatus("I don't know the command " + command + ".");
 		}
-		else if(command.equalsIgnoreCase("rest"))
-			controller.rest();
-		else
-			controller.setStatus("I don't know the command " + command + ".");
+		else{
+			controller.setStatus("You can only quit or start over now.");
+			String command = sc.nextLine();
+			if(command.equalsIgnoreCase("new game")){
+				controller.newGame();
+				controller.setStatus("You decide to start a new Adventure!");
+			}
+			else if(command.equalsIgnoreCase("quit")){
+				logger.info("You decide to quit your Adventure..");
+				System.exit(0);
+			}
+			else
+				controller.setStatus("You can only quit or start over now.");
+		}
+			
 	}
 
 	@Override

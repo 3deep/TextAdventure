@@ -4,6 +4,7 @@ import de.htwg.TextAdventure.battle.Arena;
 import de.htwg.TextAdventure.battle.IArena;
 import de.htwg.TextAdventure.chars.IPlayer;
 import de.htwg.TextAdventure.chars.NPC;
+import de.htwg.TextAdventure.chars.Player;
 import de.htwg.TextAdventure.items.IArmor;
 import de.htwg.TextAdventure.items.IWeapon;
 import de.htwg.TextAdventure.world.IWorld;
@@ -31,25 +32,56 @@ public class TextAdventureController extends Observable implements IObserver{
 		arena.addObserver(this);
 	}
 	
+	public void newGame(){
+		player = new Player(3, 3, 3, 3, 3, 3, 3);
+	}
+	
 	/**
 	 * printPlayerStats
 	 * @return String of player Stats
 	 */
 	public String printPlayerStats() {
 		String s = "";
-		s += "You have " + player.currentHealthGet() + " out of " + player.maxHealthGet() + " HP\n";
+		s += "HP: " + player.currentHealthGet() + " out of " + player.maxHealthGet() + "\n";
 		s += "Strength: " + player.strGet() + "\n";
 		s += "Dexterity: " + player.dexGet() + "\n";
 		s += "Intelligence: " + player.cintGet() + "\n";
 		s += "Speed: " + player.speedGet() + "\n";
 		s += "Weapon: " + player.wepGet().toString() + "\n";
 		s += "Armor: " + player.armGet().toString() + "\n";
-		if(player.battlesFoughtGet() == 1)
-			s += "On your journey you defeated " + player.battlesFoughtGet() + " foe!";
-		else
-			s += "On your journey you defeated " + player.battlesFoughtGet() + " foes!";
+		s += "Times Won: " + player.battlesFoughtGet() + "\n";
+		s+= player.getStatPoints() + " Statpoints";
 		return s;
 		
+	}
+	
+	public void upgrade(String stat){
+		if(player.getStatPoints() <= 0){
+			setStatus("You don't have any Statpoints left.");
+			return;
+		}
+		if(stat.equalsIgnoreCase("str")){
+			player.incStr();
+			setStatus("Increased your strength by one Point (now: " + player.strGet() + ").");
+		}
+		else if(stat.equalsIgnoreCase("dex")){
+			player.incDex();
+			setStatus("Increased your dexterity by one Point (now: " + player.dexGet() + ").");
+		}
+		else if(stat.equalsIgnoreCase("int")){
+			player.inccint();
+			setStatus("Increased your intelligence by one Point (now: " + player.cintGet() + ").");
+		}
+		else if(stat.equalsIgnoreCase("speed")){
+			player.incSpeed();
+			setStatus("Increased your speed by one Point (now: " + player.speedGet() + ").");
+		}
+		else if(stat.equalsIgnoreCase("hp")){
+			player.incHP();
+			setStatus("Increased your HP by two Points (now: " + player.maxHealthGet() + ").");
+		}
+		else
+			setStatus("I don't know what you mean with " + stat + ".");
 	}
 	
 	/**
@@ -83,13 +115,16 @@ public class TextAdventureController extends Observable implements IObserver{
 		NPC enemy = new NPC(player.playerPositionGet());
 		while(enemy.currentHealthGet() == 0)
 			enemy = new NPC(player.playerPositionGet());
-		if(arena.battle(player, enemy)){
+		int result = arena.battle(player, enemy);
+		if(result == 1){
 			lootW = enemy.wepGet();
 			lootA = enemy.armGet();
 			setStatus("You managed to beat your foe.");
 			player.battlesFoughtInc();
+			if(player.battlesFoughtGet() % 2 == 0)
+				player.incStatPoints();
 		}
-		else
+		else if(result == 0)
 			setStatus("You ran from battle");
 	}
 	
@@ -231,6 +266,10 @@ public class TextAdventureController extends Observable implements IObserver{
 		}
 		else
 			setStatus("That is probably a stupid idea here.");
+	}
+	
+	public boolean playerIsAlive() {
+		return player.isAlive();
 	}
 
 	@Override

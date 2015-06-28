@@ -191,8 +191,8 @@ public class Armor implements IArmor {
 	@Override
 	public String toString() {
 		if(this.type != AType.NO_ARMOR)
-			return this.type.typeGet() + " with a Damage Block potetial of " + dmgBlockGet() + ".\nIt requires " + reqStr + " Strength, " + reqDex + " Dexterity and " + reqInt + " Intelligence to wear";
+			return this.type.typeGet() + " (" + dmgBlockGet() + " Block)\nStr: " + reqStr + ", Dex: " + reqDex + ", Int: " + reqInt;
 		else
-			return this.type.typeGet() + " with a Damage Block potetial of " + dmgBlockGet() + ".\nIt requires no Stats to not wear anything";
+			return this.type.typeGet() + " (" + dmgBlockGet() + " Block)\nNo requirements";
 	}
 }

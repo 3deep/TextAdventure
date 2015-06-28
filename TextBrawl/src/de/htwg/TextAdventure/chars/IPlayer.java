@@ -66,5 +66,13 @@ public interface IPlayer {
 	public abstract void incSpeed();
 	
 	public abstract void incHP();
+	
+	public abstract int getStatPoints();
+	
+	public abstract void incStatPoints();
+	
+	public abstract boolean isAlive();
+	
+	public abstract void dead();
 
 }

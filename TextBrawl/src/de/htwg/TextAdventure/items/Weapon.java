@@ -198,8 +198,8 @@ public class Weapon implements IWeapon {
 	@Override
 	public String toString() {
 		if(type != WType.W0)
-			return this.type.typeGet() + " with a Damage potential of " + dmgGet() + "\nIt requires " + reqStr + " Strength, " + reqDex + " Dexterity and " + reqInt + " Intelligence to equip.";
+			return this.type.typeGet() + " (" + dmgGet() + " dmg)\nStr: " + reqStr + ", Dex: " + reqDex + ", Int: " + reqInt;
 		else
-			return this.type.typeGet() + " with a Damage potential of " + dmgGet() + "\nIt requires nothing to use your Fists";
+			return this.type.typeGet() + " (" + dmgGet() + " dmg)\nNo requirements";
 	}
 }

@@ -11,6 +11,10 @@ public class Player extends Character implements IPlayer {
 
 	private int battlesFought;
 	
+	private int statPoints;
+	
+	private boolean alive;
+	
 	/**
 	 * creates the player with the corresponding roll value
 	 * @param roll
@@ -19,6 +23,8 @@ public class Player extends Character implements IPlayer {
 	public Player(int maxH, int str, int dex, int cint, int speed, int armorRoll, int wepRoll){
 		allSet(maxH, str, dex, cint, speed, armorRoll, wepRoll);
 		playerPosition = 0;
+		statPoints = 0;
+		alive = true;
 	}
 
 	/* (non-Javadoc)
@@ -95,32 +101,46 @@ public class Player extends Character implements IPlayer {
 	@Override
 	public void incStr() {
 		str++;
-		
+		statPoints--;
 	}
 
 	@Override
 	public void inccint() {
 		cint++;
-		
+		statPoints--;
 	}
 
 	@Override
 	public void incDex() {
 		dex++;
-		
+		statPoints--;
 	}
 
 	@Override
 	public void incSpeed() {
 		speed++;
-		
+		statPoints--;
 	}
 
 	@Override
 	public void incHP() {
 		maxHealth += 2;
-		
+		statPoints--;
 	}
 
+	public int getStatPoints() {
+		return statPoints;
+	}
 	
+	public void incStatPoints(){
+		statPoints++;
+	}
+	
+	public boolean isAlive() {
+		return alive;
+	}
+	
+	public void dead() {
+		this.alive = false;
+	}
 }

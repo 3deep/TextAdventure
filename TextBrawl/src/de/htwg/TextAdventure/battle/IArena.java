@@ -6,7 +6,7 @@ import de.htwg.util.observer.IObserver;
 
 public interface IArena {
 
-	public abstract boolean battle(IPlayer player, INPC enemy);
+	public abstract int battle(IPlayer player, INPC enemy);
 	
 	public abstract void addObserver(IObserver s);
 	
