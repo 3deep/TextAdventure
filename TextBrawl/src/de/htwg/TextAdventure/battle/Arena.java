@@ -1,15 +1,21 @@
 package de.htwg.TextAdventure.battle;
 
 import java.util.Random;
-import java.util.Scanner;
-
 import de.htwg.TextAdventure.chars.INPC;
 import de.htwg.TextAdventure.chars.IPlayer;
+import de.htwg.TextAdventure.items.IArmor;
+import de.htwg.TextAdventure.items.IWeapon;
 import de.htwg.util.observer.Observable;
 
 public class Arena extends Observable implements IArena {
 	
-	String fightStatus;
+	private String fightStatus;
+	private boolean inBattle = false;
+	private int fightResult = 0;
+	private IPlayer player;
+	private INPC enemy;
+	private IArmor lootA;
+	private IWeapon lootW;
 	
 	public Arena(){
 		;
@@ -19,45 +25,38 @@ public class Arena extends Observable implements IArena {
 	 * @see de.htwg.TextAdventure.battle.IArena#battle(de.htwg.TextAdventure.chars.IPlayer, de.htwg.TextAdventure.chars.INPC)
 	 */
 	@Override
-	public int battle(IPlayer player, INPC enemy) {
+	public void battle(IPlayer p, INPC e) {
+		this.player = p;
+		this.enemy = e;
+		lootW = enemy.wepGet();
+		lootA = enemy.armGet();
+		inBattle = true;
 		fightStatus = "The Battle starts!\n";
 		fightStatus += "You ready your " + player.wepGet().getName() + ".\n";
 		fightStatus += "Your enemy wields a " + enemy.wepGet().getName() + " and is wearing a " + enemy.armGet().getName() + ".\n";
-		@SuppressWarnings("resource")
-		Scanner scan = new Scanner(System.in);
-		while(player.checkHealth() && enemy.checkHealth()){
-			fightStatus += "You are on " + player.currentHealthGet() + " out of " + player.maxHealthGet() + " health points.\n";
-			fightStatus += "Your enemy has " + enemy.currentHealthGet() + " out of " + enemy.maxHealthGet() + " health points.\n";
-			while(true){
-				fightStatus += "Now what are you going to do? Attack or Flee?";
+		fightStatus += "You are on " + player.currentHealthGet() + " out of " + player.maxHealthGet() + " health points.\n";
+		fightStatus += "Your enemy has " + enemy.currentHealthGet() + " out of " + enemy.maxHealthGet() + " health points.\n";
+		fightStatus += "Now what are you going to do? Attack or Flee?";
 				notifyObservers();
-				String tmp = scan.nextLine();
-					if(tmp.equalsIgnoreCase("attack")){
-						attack(player, enemy);
-						break;
-					}
-					else if(tmp.equalsIgnoreCase("flee")){
-						if(player.speedGet() > enemy.speedGet()){
-							return 0;
-						}
-						else
-							fightStatus = "You were too slow. The enemy denies you any chance at escape.";
-					}
-					else 
-						fightStatus = "I don't understand the command " + tmp;
-			}
 			if(!player.checkHealth()){
 				fightStatus += "You have fallen in valiant battle.\n\nGAME OVER";
 				notifyObservers();
 				player.dead();
-				return 2;
+				inBattle = false;
 			}
-		}
 		notifyObservers();
-		return 1;
 	}
-
-	private void attack(IPlayer player, INPC enemy) {
+	
+	public void flee() {
+		if(player.speedGet() > enemy.speedGet()){
+			inBattle = false;
+			fightResult = 0;
+		}
+		else
+			fightStatus = "You were too slow. The enemy denies you any chance at escape.";
+	}
+	
+	public void attack() {
 		Random rnd = new Random();
 		int dmg;
 		int atPlayer;
@@ -90,8 +89,11 @@ public class Arena extends Observable implements IArena {
 			}
 			else
 				fightStatus +="but couldn't do any damage.\n";
-			if(!enemy.checkHealth())
+			if(!enemy.checkHealth()){
+				inBattle = false;
+				fightResult = 1;
 				return;
+			}
 			dmg = (atEnemy) - (blockPlayer);
 			fightStatus += "(" + enemy.wepGet().dmgGet() + "-" + atEnemy + ")" + "The enemy swings their " + enemy.wepGet().getName() + " ";
 			fightStatus += "(" + player.armGet().dmgBlockGet() + "-" + blockPlayer + ")";
@@ -112,8 +114,11 @@ public class Arena extends Observable implements IArena {
 			}
 			else
 				fightStatus += "but couldn't do any damage.\n";
-			if(!player.checkHealth())
+			if(!player.checkHealth()){
+				inBattle = false;
+				fightResult = 2;
 				return;
+			}
 			dmg = (atPlayer) - (blockEnemy);
 			fightStatus += "(" + player.wepGet().dmgGet() + "-" + atPlayer + ")" + "You swing your " + player.wepGet().getName() + " ";
 			fightStatus += "(" + enemy.armGet().dmgBlockGet() + "-" + blockEnemy + ")";
@@ -124,10 +129,36 @@ public class Arena extends Observable implements IArena {
 			else
 				fightStatus +="but couldn't do any damage.\n";
 		}
+		fightStatus += "You are on " + player.currentHealthGet() + " out of " + player.maxHealthGet() + " health points.\n";
+		fightStatus += "Your enemy has " + enemy.currentHealthGet() + " out of " + enemy.maxHealthGet() + " health points.\n";
+		if(!enemy.checkHealth() || !player.checkHealth()){
+			inBattle = false;
+			if(player.checkHealth())
+				fightResult = 1;
+			else
+				fightResult = 2;
+		}
+		
 	}
 	
 	public String getFightStatus() {
 		return fightStatus;
+	}
+	
+	public boolean inBattle(){
+		return inBattle;
+	}
+	
+	public int fightResult(){
+		return fightResult;
+	}
+	
+	public IArmor lootA(){
+		return lootA;
+	}
+	
+	public IWeapon lootW(){
+		return lootW;
 	}
 
 

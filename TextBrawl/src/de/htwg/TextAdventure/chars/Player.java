@@ -143,4 +143,11 @@ public class Player extends Character implements IPlayer {
 	public void dead() {
 		this.alive = false;
 	}
+	
+	@Override
+	public void damage(int dmg){
+		currentHealth = currentHealth - dmg;
+		if(currentHealth <= 0)
+			dead();
+	}
 }

@@ -50,27 +50,39 @@ public class TUI implements IObserver{
 				logger.info("You decide to quit your Adventure..");
 				System.exit(0);
 			}
-			else if(command.equalsIgnoreCase("stats"))
+			else if(command.equalsIgnoreCase("stats") && !controller.activeBattle())
 				printStats();
-			else if(command.equalsIgnoreCase("explore"))
+			else if(command.equalsIgnoreCase("attack")){
+				if(controller.activeBattle())
+					controller.battleFight();
+				else
+					controller.setStatus("Who do you want to fight?");
+			}
+			else if(command.equalsIgnoreCase("flee")){
+				if(controller.activeBattle())
+					controller.battleFlee();
+				else
+					controller.setStatus("Where do you want to flee from?");
+			}
+			else if(command.equalsIgnoreCase("explore") && !controller.activeBattle())
 				controller.explore();
 			else if(command.equalsIgnoreCase("help")){
 				this.help = true;
 			}
-			else if(command.equalsIgnoreCase("goto")) {
+			else if(command.equalsIgnoreCase("goto") && !controller.activeBattle()) {
 				logger.info("Where do you want to go?");
 				controller.areas();
 				update();
 				command = sc.nextLine();
 				controller.goTo(command);
 			} 
-			else if(command.equalsIgnoreCase("areas"))
+			else if(command.equalsIgnoreCase("areas") && !controller.activeBattle())
 				controller.areas();
-		
-			else if(command.equalsIgnoreCase("inspect"))
+
+			else if(command.equalsIgnoreCase("inspect") && !controller.activeBattle())
 				controller.inspectLoot();
-		
-			else if(command.equalsIgnoreCase("take")){
+
+			else if(command.equalsIgnoreCase("take") && !controller.activeBattle()){
 				logger.info("What do you want to take?");
 				command = sc.nextLine();
 				if(command.equalsIgnoreCase("Armor"))
@@ -80,9 +92,9 @@ public class TUI implements IObserver{
 				else
 					logger.info("There is no such thing here.");
 			}
-			else if(command.equalsIgnoreCase("rest"))
+			else if(command.equalsIgnoreCase("rest") && !controller.activeBattle())
 				controller.rest();
-			else if(command.equalsIgnoreCase("upgrade")){
+			else if(command.equalsIgnoreCase("upgrade") && !controller.activeBattle()){
 				logger.info("Which Stat do you want to upgrade? Str, Dex, Int, Speed or HP?");
 				command = sc.nextLine();
 				controller.upgrade(command);

@@ -68,12 +68,15 @@ public class MainPanel extends JPanel{
 		button4.setPreferredSize(buttenDimension);
 		button5 = new JButton();
 		button5.setPreferredSize(buttenDimension);
+		button6 = new JButton();
+		button6.setPreferredSize(buttenDimension);
 
 		buttonsPanel.add(button1);
 		buttonsPanel.add(button2);
 		buttonsPanel.add(button3);
 		buttonsPanel.add(button4);
 		buttonsPanel.add(button5);
+		buttonsPanel.add(button6);
 		
 		GroupLayout layout = new GroupLayout(mainPanel);
 		mainPanel.setLayout(layout);
@@ -135,6 +138,9 @@ public class MainPanel extends JPanel{
 			case 5:
 				button5.setText(text);
 				break;
+			case 6:
+				button6.setText(text);
+				break;
 			default:
 				break;
 		}
@@ -175,6 +181,12 @@ public class MainPanel extends JPanel{
 				button5.setEnabled(true);
 			else
 				button5.setEnabled(false);
+			break;
+		case 6:
+			if(bool)
+				button6.setEnabled(true);
+			else
+				button6.setEnabled(false);
 			break;
 		default:
 			break;

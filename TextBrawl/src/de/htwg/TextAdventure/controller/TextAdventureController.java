@@ -106,26 +106,36 @@ public class TextAdventureController extends Observable implements IObserver{
 	public void explore() {
 		setStatus(world.explore(player.playerPositionGet()));
 		if(statusMessage.equalsIgnoreCase("a new encounter") && player.playerPositionGet() != 0)
-			battle();
+			battleStart();
 	}
 	 /**
 	  * fight fierce battle
 	  */
-	private void battle() {
+	private void battleStart() {
 		NPC enemy = new NPC(player.playerPositionGet());
 		while(enemy.currentHealthGet() == 0)
 			enemy = new NPC(player.playerPositionGet());
-		int result = arena.battle(player, enemy);
+		arena.battle(player, enemy);
+	}
+	
+	public boolean activeBattle(){
+		return arena.inBattle();
+	}
+	
+	public void battleEnd() {
+		int result = arena.fightResult();
 		if(result == 1){
-			lootW = enemy.wepGet();
-			lootA = enemy.armGet();
-			setStatus("You managed to beat your foe.");
+			lootW = arena.lootW();
+			lootA = arena.lootA();
+			setStatus(arena.getFightStatus() + "\nYou managed to beat your foe.");
 			player.battlesFoughtInc();
 			if(player.battlesFoughtGet() % 2 == 0)
 				player.incStatPoints();
 		}
 		else if(result == 0)
 			setStatus("You ran from battle");
+		else if(result == 2)
+			setStatus(arena.getFightStatus() + "\nYou fall defeated in battle.\n\nGAME OVER");
 	}
 	
 	/**
@@ -143,6 +153,10 @@ public class TextAdventureController extends Observable implements IObserver{
 			setStatus("There is nothing here to be inspected!");
 	}
 	
+	public boolean lootAvailable(){
+		return((lootW != null && lootW.notFists()) || (lootA != null && lootA.notNoArmor()) );
+	}
+	
 	/**
 	 * Replaces the characters Armor with the one on the Ground
 	 */
@@ -154,9 +168,9 @@ public class TextAdventureController extends Observable implements IObserver{
 		else {
 			player.giveArmor(lootA);
 			setStatus("You equip your new " + lootA.getName() + ".");
+			lootW = null;
+			lootA = null;
 		}
-		lootW = null;
-		lootA = null;
 	}
 
 	/**
@@ -170,9 +184,9 @@ public class TextAdventureController extends Observable implements IObserver{
 		else {
 			player.giveWeapon(lootW);
 			setStatus("You equip your new " + lootW.getName() + ".");
+			lootW = null;
+			lootA = null;
 		}
-		lootW = null;
-		lootA = null;
 	}
 	
 	/**
@@ -271,12 +285,56 @@ public class TextAdventureController extends Observable implements IObserver{
 	public boolean playerIsAlive() {
 		return player.isAlive();
 	}
-
+	
+	public boolean discoveredRiver(){
+		return world.discoveredRiver();
+	}
+	
+	public boolean discoveredForestCave(){
+		return world.discoveredForestCave();
+	}
+	
+	public boolean discoveredGlimmeringShroomCavern(){
+		return world.discoveredGlimmeringShroomCavern();
+	}
+	
+	public boolean discoveredMagmaDepths(){
+		return world.discoveredMagmaDepths();
+	}
+	
+	public boolean discoveredPortal(){
+		return world.discoveredPortal();
+	}
+	
+	public boolean discoveredOtherworld(){
+		return world.discoveredOtherworld();
+	}
+	
+	public boolean playerHasStats(){
+		return(player.getStatPoints() > 0);
+	}
+	
 	@Override
 	public void update() {
 
 		setStatus(arena.getFightStatus());
 		notifyObservers();
+	}
+
+	public void battleFight() {
+		arena.attack();
+		if(arena.inBattle())
+			setStatus(arena.getFightStatus());
+		else
+			battleEnd();
+	}
+
+	public void battleFlee() {
+		arena.flee();
+		if(arena.inBattle())
+			setStatus(arena.getFightStatus());
+		else
+			battleEnd();
 	}
 
 }
