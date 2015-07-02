@@ -104,28 +104,28 @@ public class GUI implements IObserver, ActionListener {
 			return;
 		}
 		
-		if(source.getText().equalsIgnoreCase("Strenth")){
-			controller.upgrade("Strenth");
+		if(source.getText().equalsIgnoreCase("Strength")){
+			controller.upgrade("Str");
 			setButtonsNormal();
 			printAll();
 			return;
 		}
 		
-		if(source.getText().equalsIgnoreCase("dexterity")){
-			controller.upgrade("dexterity");
+		if(source.getText().equalsIgnoreCase("Dexterity")){
+			controller.upgrade("dex");
 			setButtonsNormal();
 			printAll();
 			return;
 		}
 		
-		if(source.getText().equalsIgnoreCase("intelligence")){
-			controller.upgrade("intelligence");
+		if(source.getText().equalsIgnoreCase("Intelligence")){
+			controller.upgrade("int");
 			setButtonsNormal();
 			printAll();
 			return;
 		}
 		
-		if(source.getText().equalsIgnoreCase("speed")){
+		if(source.getText().equalsIgnoreCase("Speed")){
 			controller.upgrade("speed");
 			setButtonsNormal();
 			printAll();
