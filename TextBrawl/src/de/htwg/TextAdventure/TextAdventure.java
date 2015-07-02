@@ -1,42 +1,28 @@
 package de.htwg.TextAdventure;
 
-import java.awt.Component;
+import org.apache.log4j.*;
 
-import javax.swing.JOptionPane;
-
-import org.apache.log4j.PropertyConfigurator;
-
-import de.htwg.TextAdventure.UI.GUI;
-import de.htwg.TextAdventure.UI.TUI;
-import de.htwg.TextAdventure.chars.Player;
-import de.htwg.TextAdventure.controller.TextAdventureController;
-import de.htwg.TextAdventure.world.World;
+import de.htwg.TextAdventure.aview.gui.GUI;
+import de.htwg.TextAdventure.aview.tui.TUI;
+import de.htwg.TextAdventure.controller.ITextAdventureController;
+import de.htwg.TextAdventure.controller.impl.TextAdventureController;
+import de.htwg.TextAdventure.model.impl.Player;
+import de.htwg.TextAdventure.model.impl.World;
 
 final class TextAdventure {
+	
+	private static ITextAdventureController controller;
 		
+	@SuppressWarnings("unused")
 	public static void main (final String args[]) throws InterruptedException{
-		Object[] options = {"GUI",
-                			"TUI"};
-		Component frame = null;
-		int n = JOptionPane.showOptionDialog(frame,
-				"Start GUI or TUI",
-						"Startup",
-						JOptionPane.YES_NO_OPTION,
-						JOptionPane.QUESTION_MESSAGE,
-						null,
-						options,
-						options[1]);
-		if(n == 1){
-			TUI tui = new TUI(new TextAdventureController(new Player(3, 3, 3, 3, 3, 3, 3), new World()));
-			PropertyConfigurator.configure("C:\\Studium\\eclipse\\TextAdventure\\TextAdventure\\TextBrawl\\log4j.properties");
-			while(true)
-				tui.waitInput();
-			
-			//observer for loading and saving !
-		}
-		else {
-			GUI gui = new GUI(new TextAdventureController(new Player(3, 3, 3, 3, 3, 3, 3), new World()));
-		}
+		controller = new TextAdventureController(new Player(3, 3, 3, 3, 3, 3, 3), new World());
+
+		PropertyConfigurator.configure("-source \\..\\log4j.properties");
+		
+		GUI gui = new GUI(controller);
+		TUI tui = new TUI(controller);
+		while(true)
+			tui.waitInput();
 	}
 
 }
