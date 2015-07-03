@@ -13,10 +13,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Studium/eclipse/TextAdventure/TextAdventure/TextBrawl/lib/aopalliance.jar"/>
-	<classpathentry kind="lib" path="C:/Studium/eclipse/TextAdventure/TextAdventure/TextBrawl/lib/guice-3.0.jar"/>
-	<classpathentry kind="lib" path="C:/Studium/eclipse/TextAdventure/TextAdventure/TextBrawl/lib/guice-assistedinject-3.0.jar"/>
-	<classpathentry kind="lib" path="C:/Studium/eclipse/TextAdventure/TextAdventure/TextBrawl/lib/javax.inject.jar"/>
-	<classpathentry kind="lib" path="C:/Studium/eclipse/TextAdventure/TextAdventure/TextBrawl/lib/log4j.jar"/>
+	<classpathentry kind="lib" path="lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="lib/guice-3.0.jar"/>
+	<classpathentry kind="lib" path="lib/guice-assistedinject-3.0.jar"/>
+	<classpathentry kind="lib" path="lib/javax.inject.jar"/>
+	<classpathentry kind="lib" path="lib/log4j.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

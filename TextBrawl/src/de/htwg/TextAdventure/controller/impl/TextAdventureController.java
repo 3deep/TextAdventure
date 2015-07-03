@@ -95,8 +95,8 @@ public class TextAdventureController extends Observable implements IObserver, IT
 			player.incHP();
 			setStatus("Increased your HP by two Points (now: " + player.maxHealthGet() + ").");
 		}
-		else
-			setStatus("I don't know what you mean with " + stat + ".");
+		else{
+			setStatus("I don't know what you mean with " + stat + ".");}
 	}
 	
 	/* (non-Javadoc)
@@ -156,13 +156,13 @@ public class TextAdventureController extends Observable implements IObserver, IT
 			lootA = arena.lootA();
 			setStatus(arena.getFightStatus() + "\nYou managed to beat your foe.");
 			player.battlesFoughtInc();
-			if(player.battlesFoughtGet() % 2 == 0)
-				player.incStatPoints();
+			if(player.battlesFoughtGet() % 2 == 0){
+				player.incStatPoints();}
 		}
-		else if(result == 0)
-			setStatus("You ran from battle");
-		else
-			setStatus(arena.getFightStatus() + "\nYou fall defeated in battle.\n\nGAME OVER");
+		else if(result == 0){
+			setStatus("You ran from battle");}
+		else{
+			setStatus(arena.getFightStatus() + "\nYou fall defeated in battle.\n\nGAME OVER");}
 	}
 	
 	/* (non-Javadoc)
@@ -171,14 +171,14 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	@Override
 	public void inspectLoot() {
 		String tmp = "";
-		if( lootW.notFists() )
-			tmp += lootW.toString() + "\n";
-		if( lootA.notNoArmor() )
-			tmp += lootA.toString() + "\n";
-		if(!tmp.equals(""))
-			setStatus("On the Ground you see:\n" + tmp);
-		else
-			setStatus("There is nothing here to be inspected!");
+		if( lootW.notFists() ){
+			tmp += lootW.toString() + "\n";}
+		if( lootA.notNoArmor() ){
+			tmp += lootA.toString() + "\n";}
+		if(!tmp.equals("")){
+			setStatus("On the Ground you see:\n" + tmp);}
+		else{
+			setStatus("There is nothing here to be inspected!");}
 	}
 	
 	protected void give(IWorld world, IArmor LootA, IWeapon LootW){
@@ -193,8 +193,8 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	 */
 	@Override
 	public boolean lootAvailable(){
-		if(lootW != null || lootA != null)
-			return((lootW.notFists()) || (lootA.notNoArmor()) );
+		if(lootW != null || lootA != null){
+			return((lootW.notFists()) || (lootA.notNoArmor()) );}
 		return false;
 	}
 	
@@ -298,18 +298,18 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	@Override
 	public void areas() {
 		String s = "So far you have discovered: Town, Forest";
-		if(world.discoveredForestCave())
-			s += ", ForestCave";
-		if(world.discoveredRiver())
-			s += ", River";
-		if(world.discoveredGlimmeringShroomCavern())
-			s += ", GlimmeringShroomCavern";
-		if(world.discoveredMagmaDepths())
-			s += ", MagmaDepths";
-		if(world.discoveredPortal())
-			s += ", Portal";
-		if(world.discoveredOtherworld())
-			s += ", Otherworld";
+		if(world.discoveredForestCave()){
+			s += ", ForestCave";}
+		if(world.discoveredRiver()){
+			s += ", River";}
+		if(world.discoveredGlimmeringShroomCavern()){
+			s += ", GlimmeringShroomCavern";}
+		if(world.discoveredMagmaDepths()){
+			s += ", MagmaDepths";}
+		if(world.discoveredPortal()){
+			s += ", Portal";}
+		if(world.discoveredOtherworld()){
+			s += ", Otherworld";}
 		s +=".";
 		setStatus(s);
 	}
@@ -323,8 +323,8 @@ public class TextAdventureController extends Observable implements IObserver, IT
 			player.rest();
 			setStatus("You relax for a bit, Healing yourself back to full health.");
 		}
-		else
-			setStatus("That is probably a stupid idea here.");
+		else{
+			setStatus("That is probably a stupid idea here.");}
 	}
 	
 	/* (non-Javadoc)
@@ -406,10 +406,10 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	@Override
 	public void battleFight() {
 		arena.attack();
-		if(arena.inBattle())
-			setStatus(arena.getFightStatus());
-		else
-			battleEnd();
+		if(arena.inBattle()){
+			setStatus(arena.getFightStatus());}
+		else{
+			battleEnd();}
 	}
 	
 	protected void giveArena(){
@@ -424,10 +424,10 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	@Override
 	public void battleFlee() {
 		arena.flee();
-		if(arena.inBattle())
-			setStatus(arena.getFightStatus());
-		else
-			battleEnd();
+		if(arena.inBattle()){
+			setStatus(arena.getFightStatus());}
+		else{
+			battleEnd();}
 	}
 
 	@Override
@@ -436,7 +436,7 @@ public class TextAdventureController extends Observable implements IObserver, IT
 			battleEnded = false;
 			return true;
 		}
-		else return false;
+		else {return false;}
 	}
 
 }

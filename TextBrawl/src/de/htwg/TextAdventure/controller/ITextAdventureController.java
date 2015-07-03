@@ -15,6 +15,10 @@ public interface ITextAdventureController {
 	 */
 	public abstract String printPlayerStats();
 
+	/**
+	 * upgrades chosen attribute
+	 * @param stat
+	 */
 	public abstract void upgrade(String stat);
 
 	/**
@@ -34,8 +38,15 @@ public interface ITextAdventureController {
 	 */
 	public abstract void explore();
 
+	/**
+	 * explore the worlds
+	 * @return
+	 */
 	public abstract boolean activeBattle();
 
+	/**
+	 * battle comes to an end
+	 */
 	public abstract void battleEnd();
 
 	/**
@@ -43,6 +54,10 @@ public interface ITextAdventureController {
 	 */
 	public abstract void inspectLoot();
 
+	/**
+	 * checks if loot sis on the ground
+	 * @return
+	 */
 	public abstract boolean lootAvailable();
 
 	/**
@@ -71,28 +86,73 @@ public interface ITextAdventureController {
 	 */
 	public abstract void rest();
 
+	/**
+	 * checks if player is alive
+	 * @return
+	 */
 	public abstract boolean playerIsAlive();
 
+	/** 
+	 * same as in world
+	 * @return
+	 */
 	public abstract boolean discoveredRiver();
 
+	/**
+	 * saem as world
+	 * @return
+	 */
 	public abstract boolean discoveredForestCave();
 
+	/**
+	 * same as world
+	 * @return
+	 */
 	public abstract boolean discoveredGlimmeringShroomCavern();
 
+	/**
+	 * see world
+	 * @return
+	 */
 	public abstract boolean discoveredMagmaDepths();
 
+	/**
+	 * wolrd
+	 * @return
+	 */
 	public abstract boolean discoveredPortal();
 
+	/**
+	 * same as iworld
+	 * @return
+	 */
 	public abstract boolean discoveredOtherworld();
 
+	/**
+	 * chekcs for statpoints
+	 * @return
+	 */
 	public abstract boolean playerHasStats();
 
+	/** 
+	 * observer update
+	 */
 	public abstract void update();
 
+	/**
+	 * attack an eneym
+	 */
 	public abstract void battleFight();
 
+	/**
+	 * flee from batel
+	 */
 	public abstract void battleFlee();
 	
+	/**
+	 * checks for ended battle
+	 * @return
+	 */
 	public abstract boolean battleEnded();
 
 }
