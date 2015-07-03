@@ -193,7 +193,9 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	 */
 	@Override
 	public boolean lootAvailable(){
-		return((lootW.notFists()) || (lootA.notNoArmor()) );
+		if(lootW != null || lootA != null)
+			return((lootW.notFists()) || (lootA.notNoArmor()) );
+		return false;
 	}
 	
 	/* (non-Javadoc)
