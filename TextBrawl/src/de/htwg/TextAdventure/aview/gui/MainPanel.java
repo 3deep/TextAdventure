@@ -152,40 +152,40 @@ public class MainPanel extends JPanel{
 	public void setButtonActive(int num, boolean bool){
 		switch(num){
 		case 1:
-			if(bool)
-				button1.setEnabled(true);
-			else
-				button1.setEnabled(false);
+			if(bool){
+				button1.setEnabled(true);}
+			else{
+				button1.setEnabled(false);}
 			break;
 		case 2:
-			if(bool)
-				button2.setEnabled(true);
-			else
-				button2.setEnabled(false);
+			if(bool){
+				button2.setEnabled(true);}
+			else{
+				button2.setEnabled(false);}
 			break;
 		case 3:
-			if(bool)
-				button3.setEnabled(true);
-			else
-				button3.setEnabled(false);
+			if(bool){
+				button3.setEnabled(true);}
+			else{
+				button3.setEnabled(false);}
 			break;
 		case 4:
-			if(bool)
-				button4.setEnabled(true);
-			else
-				button4.setEnabled(false);
+			if(bool){
+				button4.setEnabled(true);}
+			else{
+				button4.setEnabled(false);}
 			break;
 		case 5:
-			if(bool)
-				button5.setEnabled(true);
-			else
-				button5.setEnabled(false);
+			if(bool){
+				button5.setEnabled(true);}
+			else{
+				button5.setEnabled(false);}
 			break;
 		case 6:
-			if(bool)
-				button6.setEnabled(true);
-			else
-				button6.setEnabled(false);
+			if(bool){
+				button6.setEnabled(true);}
+			else{
+				button6.setEnabled(false);}
 			break;
 		default:
 			break;

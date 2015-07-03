@@ -10,9 +10,9 @@ import de.htwg.util.observer.Observable;
 
 public class TUI implements IObserver{
 	
-	public boolean quit = false;
+	private boolean quit = false;
 	private ITextAdventureController controller;
-	Scanner sc = new Scanner(System.in);
+	private Scanner sc = new Scanner(System.in);
 	private boolean help = true;
 	private Logger logger = Logger.getLogger("de.htwg.TextAdventure.UI.TUI");
 	/**

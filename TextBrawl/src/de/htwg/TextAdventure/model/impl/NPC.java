@@ -2,15 +2,12 @@ package de.htwg.TextAdventure.model.impl;
 
 import java.util.Random;
 
-import de.htwg.TextAdventure.model.IArmor;
 import de.htwg.TextAdventure.model.INPC;
-import de.htwg.TextAdventure.model.IWeapon;
 
 public class NPC extends Character implements INPC{
 	
 	private boolean friendly;
 	private int type;
-	private Random rnd = new Random();
 	/**
 	 * creates an NPC with the corresponding roll value
 	 * @param roll

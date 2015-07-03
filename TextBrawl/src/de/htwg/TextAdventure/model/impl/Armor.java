@@ -191,9 +191,9 @@ public class Armor implements IArmor {
 	 */
 	@Override
 	public String toString() {
-		if(this.type != AType.NO_ARMOR)
-			return this.type.typeGet() + " (" + dmgBlockGet() + " Block)\nStr: " + reqStr + ", Dex: " + reqDex + ", Int: " + reqInt;
-		else
-			return this.type.typeGet() + " (" + dmgBlockGet() + " Block)\nNo requirements";
+		if(this.type != AType.NO_ARMOR){
+			return this.type.typeGet() + " (" + dmgBlockGet() + " Block)\nStr: " + reqStr + ", Dex: " + reqDex + ", Int: " + reqInt;}
+		else{
+			return this.type.typeGet() + " (" + dmgBlockGet() + " Block)\nNo requirements";}
 	}
 }

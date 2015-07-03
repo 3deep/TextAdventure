@@ -283,15 +283,15 @@ public class GUI implements IObserver, ActionListener {
 		mainPanel.changeButtonText(2, "Forest");
 		mainPanel.setButtonActive(1, true);
 		mainPanel.setButtonActive(2, true);
-		if(!controller.discoveredRiver())
-			mainPanel.setButtonActive(3, false);
-		else
-			mainPanel.setButtonActive(3, true);
+		if(!controller.discoveredRiver()){
+			mainPanel.setButtonActive(3, false);}
+		else{
+			mainPanel.setButtonActive(3, true);}
 		mainPanel.changeButtonText(3, "River");
-		if(!controller.discoveredForestCave())
-			mainPanel.setButtonActive(4, false);
-		else
-			mainPanel.setButtonActive(4, true);
+		if(!controller.discoveredForestCave()){
+			mainPanel.setButtonActive(4, false);}
+		else{
+			mainPanel.setButtonActive(4, true);}
 		mainPanel.changeButtonText(4, "Forest Cave");
 		mainPanel.setButtonActive(5, false);
 		mainPanel.changeButtonText(5, "Prev");
@@ -301,25 +301,25 @@ public class GUI implements IObserver, ActionListener {
 	
 
 	private void setGoTo2() {
-		if(!controller.discoveredGlimmeringShroomCavern())
-			mainPanel.setButtonActive(1, false);
-		else
-			mainPanel.setButtonActive(1, true);
+		if(!controller.discoveredGlimmeringShroomCavern()){
+			mainPanel.setButtonActive(1, false);}
+		else{
+			mainPanel.setButtonActive(1, true);}
 		mainPanel.changeButtonText(1, "Shroom Cavern");
-		if(!controller.discoveredMagmaDepths())
-			mainPanel.setButtonActive(2, false);
-		else
-			mainPanel.setButtonActive(2, true);
+		if(!controller.discoveredMagmaDepths()){
+			mainPanel.setButtonActive(2, false);}
+		else{
+			mainPanel.setButtonActive(2, true);}
 		mainPanel.changeButtonText(2, "Magma Depths");
-		if(!controller.discoveredPortal())
-			mainPanel.setButtonActive(3, false);
-		else
-			mainPanel.setButtonActive(3, true);
+		if(!controller.discoveredPortal()){
+			mainPanel.setButtonActive(3, false);}
+		else{
+			mainPanel.setButtonActive(3, true);}
 		mainPanel.changeButtonText(3, "Portal");
-		if(!controller.discoveredOtherworld())
-			mainPanel.setButtonActive(4, false);
-		else
-			mainPanel.setButtonActive(4, true);
+		if(!controller.discoveredOtherworld()){
+			mainPanel.setButtonActive(4, false);}
+		else{
+			mainPanel.setButtonActive(4, true);}
 		mainPanel.changeButtonText(4, "Otherworld");
 		mainPanel.setButtonActive(5, true);
 		mainPanel.changeButtonText(5, "Prev");
@@ -334,17 +334,17 @@ public class GUI implements IObserver, ActionListener {
 		mainPanel.changeButtonText(2, "Explore");
 		mainPanel.setButtonActive(3, true);
 		mainPanel.changeButtonText(3, "Inspect");
-		if(controller.lootAvailable())
-			mainPanel.setButtonActive(4, true);
-		else
-			mainPanel.setButtonActive(4, false);
+		if(controller.lootAvailable()){
+			mainPanel.setButtonActive(4, true);}
+		else{
+			mainPanel.setButtonActive(4, false);}
 		mainPanel.changeButtonText(4, "Take");
 		mainPanel.setButtonActive(5, true);
 		mainPanel.changeButtonText(5, "Rest");
-		if(controller.playerHasStats())
-			mainPanel.setButtonActive(6, true);
-		else
-			mainPanel.setButtonActive(6, false);
+		if(controller.playerHasStats()){
+			mainPanel.setButtonActive(6, true);}
+		else{
+			mainPanel.setButtonActive(6, false);}
 		mainPanel.changeButtonText(6, "Upgrade Stats");
 		printAll();
 	}

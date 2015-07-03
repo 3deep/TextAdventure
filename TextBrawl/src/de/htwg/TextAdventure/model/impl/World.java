@@ -64,8 +64,8 @@ public class World implements IWorld {
 					break;
 				}
 				else if (playerPosition == 4){
-					if(discoveredForestCave && discoveredRiver)
-						s += "nothing. You already know everything here.";
+					if(discoveredForestCave && discoveredRiver){
+						s += "nothing. You already know everything here.";}
 					else if(discoveredForestCave){
 						discoveredRiver = true;
 						s += "a Lake with a River";

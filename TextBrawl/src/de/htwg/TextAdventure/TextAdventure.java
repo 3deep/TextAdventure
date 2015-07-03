@@ -8,9 +8,6 @@ import com.google.inject.Injector;
 import de.htwg.TextAdventure.aview.gui.GUI;
 import de.htwg.TextAdventure.aview.tui.TUI;
 import de.htwg.TextAdventure.controller.ITextAdventureController;
-import de.htwg.TextAdventure.controller.impl.TextAdventureController;
-import de.htwg.TextAdventure.model.impl.Player;
-import de.htwg.TextAdventure.model.impl.World;
 
 final class TextAdventure {
 	

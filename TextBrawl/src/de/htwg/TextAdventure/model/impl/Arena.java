@@ -35,14 +35,14 @@ public class Arena extends Observable implements IArena {
 		inBattle = true;
 		fightStatus = "The Battle starts!\n";
 		fightStatus += "You ready your " + player.wepGet().getName() + ".\n";
-		if(lootW.notFists())
-			fightStatus += "Your enemy wields a " + enemy.wepGet().getName() ;
-		else
-			fightStatus += "Your enemy doesn't have a weapon";
-		if(lootA.notNoArmor())
-			fightStatus += " and is wearing a " + enemy.armGet().getName() + ".\n";
-		else
-			fightStatus += " and is wearing " + enemy.armGet().getName() + ".\n";
+		if(lootW.notFists()){
+			fightStatus += "Your enemy wields a " + enemy.wepGet().getName() ;}
+		else{
+			fightStatus += "Your enemy doesn't have a weapon";}
+		if(lootA.notNoArmor()){
+			fightStatus += " and is wearing a " + enemy.armGet().getName() + ".\n";}
+		else{
+			fightStatus += " and is wearing " + enemy.armGet().getName() + ".\n";}
 		fightStatus += "You are on " + player.currentHealthGet() + " out of " + player.maxHealthGet() + " health points.\n";
 		fightStatus += "Your enemy has " + enemy.currentHealthGet() + " out of " + enemy.maxHealthGet() + " health points.\n";
 		fightStatus += "Now what are you going to do? Attack or Flee?";
@@ -60,8 +60,8 @@ public class Arena extends Observable implements IArena {
 			inBattle = false;
 			fightResult = 0;
 		}
-		else
-			fightStatus = "You were too slow. The enemy denies you any chance at escape.";
+		else{
+			fightStatus = "You were too slow. The enemy denies you any chance at escape.";}
 	}
 	
 	public void attack() {
@@ -71,22 +71,22 @@ public class Arena extends Observable implements IArena {
 		int atEnemy;
 		int blockPlayer;
 		int blockEnemy;
-		if(player.wepGet().dmgGet() == 0)
-			atPlayer = 0;
-		else
-			atPlayer = rnd.nextInt(player.wepGet().dmgGet());
-		if(enemy.wepGet().dmgGet() == 0)
-			atEnemy = 0;
-		else
-			atEnemy = rnd.nextInt(enemy.wepGet().dmgGet());
-		if(player.armGet().dmgBlockGet() == 0)
-			blockPlayer = 0;
-		else 
-			blockPlayer = rnd.nextInt(player.armGet().dmgBlockGet());
-		if(enemy.armGet().dmgBlockGet() == 0)
-			blockEnemy = 0;
-		else 
-			blockEnemy = rnd.nextInt(enemy.armGet().dmgBlockGet());
+		if(player.wepGet().dmgGet() == 0){
+			atPlayer = 0;}
+		else{
+			atPlayer = rnd.nextInt(player.wepGet().dmgGet());}
+		if(enemy.wepGet().dmgGet() == 0){
+			atEnemy = 0;}
+		else{
+			atEnemy = rnd.nextInt(enemy.wepGet().dmgGet());}
+		if(player.armGet().dmgBlockGet() == 0){
+			blockPlayer = 0;}
+		else {
+			blockPlayer = rnd.nextInt(player.armGet().dmgBlockGet());}
+		if(enemy.armGet().dmgBlockGet() == 0){
+			blockEnemy = 0;}
+		else {
+			blockEnemy = rnd.nextInt(enemy.armGet().dmgBlockGet());}
 		if(enemy.speedGet() <= player.speedGet()){
 			dmg = (atPlayer) - (blockEnemy);
 			fightStatus = "(" + player.wepGet().dmgGet() + "-" + atPlayer + ")" + "You swing your " + player.wepGet().getName() + " ";
@@ -95,8 +95,8 @@ public class Arena extends Observable implements IArena {
 				enemy.damage(dmg);
 				fightStatus += "and did " + dmg + " points of Damage.\n";
 			}
-			else
-				fightStatus +="but couldn't do any damage.\n";
+			else{
+				fightStatus +="but couldn't do any damage.\n";}
 			if(!enemy.checkHealth()){
 				inBattle = false;
 				fightResult = 1;
@@ -109,8 +109,8 @@ public class Arena extends Observable implements IArena {
 				player.damage(dmg);
 				fightStatus += "and did " + dmg + " points of Damage.\n";
 			}
-			else
-				fightStatus += "but couldn't do any damage.\n";
+			else{
+				fightStatus += "but couldn't do any damage.\n";}
 		}
 		else {
 			dmg = (atEnemy) - (atPlayer);
@@ -120,8 +120,8 @@ public class Arena extends Observable implements IArena {
 				player.damage(dmg);
 				fightStatus += "and did " + dmg + " points of Damage.\n";
 			}
-			else
-				fightStatus += "but couldn't do any damage.\n";
+			else{
+				fightStatus += "but couldn't do any damage.\n";}
 			if(!player.checkHealth()){
 				inBattle = false;
 				fightResult = 2;
@@ -134,17 +134,17 @@ public class Arena extends Observable implements IArena {
 				enemy.damage(dmg);
 				fightStatus += "and did " + dmg + " points of Damage.\n";
 			}
-			else
-				fightStatus +="but couldn't do any damage.\n";
+			else{
+				fightStatus +="but couldn't do any damage.\n";}
 		}
 		fightStatus += "You are on " + player.currentHealthGet() + " out of " + player.maxHealthGet() + " health points.\n";
 		fightStatus += "Your enemy has " + enemy.currentHealthGet() + " out of " + enemy.maxHealthGet() + " health points.\n";
 		if(!enemy.checkHealth() || !player.checkHealth()){
 			inBattle = false;
-			if(player.checkHealth())
-				fightResult = 1;
-			else
-				fightResult = 2;
+			if(player.checkHealth()){
+				fightResult = 1;}
+			else{
+				fightResult = 2;}
 		}
 		
 	}

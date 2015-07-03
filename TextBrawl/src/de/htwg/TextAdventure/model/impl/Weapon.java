@@ -201,9 +201,9 @@ public class Weapon implements IWeapon {
 	 */
 	@Override
 	public String toString() {
-		if(type != WType.W0)
-			return this.type.typeGet() + " (" + dmgGet() + " dmg)\nStr: " + reqStr + ", Dex: " + reqDex + ", Int: " + reqInt;
-		else
-			return this.type.typeGet() + " (" + dmgGet() + " dmg)\nNo requirements";
+		if(type != WType.W0){
+			return this.type.typeGet() + " (" + dmgGet() + " dmg)\nStr: " + reqStr + ", Dex: " + reqDex + ", Int: " + reqInt;}
+		else{
+			return this.type.typeGet() + " (" + dmgGet() + " dmg)\nNo requirements";}
 	}
 }
