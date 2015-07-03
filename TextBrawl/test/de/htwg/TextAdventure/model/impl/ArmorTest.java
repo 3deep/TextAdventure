@@ -68,6 +68,7 @@ public class ArmorTest {
 		assertEquals(testArm.typeGet(), AType.NO_ARMOR);
 	}
 	
+	@SuppressWarnings("unused")
 	@Test
 	public void testTypeToBonus() {
 		IArmor A0 = new Armor(1,1,1,0);

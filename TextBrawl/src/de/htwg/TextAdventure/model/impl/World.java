@@ -2,6 +2,8 @@ package de.htwg.TextAdventure.model.impl;
 
 import java.util.Random;
 
+import com.google.inject.Inject;
+
 import de.htwg.TextAdventure.model.IWorld;
 
 public class World implements IWorld {
@@ -19,6 +21,7 @@ public class World implements IWorld {
 	/**
 	 * creates a new World
 	 */
+	@Inject
 	public World(){
 		discoveredTown = true;
 		discoveredForest = true;
@@ -181,6 +184,17 @@ public class World implements IWorld {
 	public boolean discoveredOtherworld(){
 		return discoveredOtherworld;
 	};
+	
+	public void setAll(){
+		discoveredTown = true;
+		discoveredForest = true;
+		discoveredRiver = true;
+		discoveredForestCave = true;
+		discoveredGlimmeringShroomCavern = true;
+		discoveredMagmaDepths = true;
+		discoveredPortal = true;
+		discoveredOtherworld = true;
+	}
 	
 	
 }

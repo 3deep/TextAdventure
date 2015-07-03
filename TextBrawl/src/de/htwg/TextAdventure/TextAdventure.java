@@ -2,6 +2,9 @@ package de.htwg.TextAdventure;
 
 import org.apache.log4j.*;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+
 import de.htwg.TextAdventure.aview.gui.GUI;
 import de.htwg.TextAdventure.aview.tui.TUI;
 import de.htwg.TextAdventure.controller.ITextAdventureController;
@@ -15,7 +18,11 @@ final class TextAdventure {
 		
 	@SuppressWarnings("unused")
 	public static void main (final String args[]) throws InterruptedException{
-		controller = new TextAdventureController(new Player(3, 3, 3, 3, 3, 3, 3), new World());
+		
+		Injector injector = Guice.createInjector(new TextAdventureModule());
+		
+		//controller = new TextAdventureController(new Player(3, 3, 3, 3, 3, 3, 3), new World());
+		controller = injector.getInstance(ITextAdventureController.class);
 
 		PropertyConfigurator.configure("-source \\..\\log4j.properties");
 		
@@ -26,4 +33,3 @@ final class TextAdventure {
 	}
 
 }
-	

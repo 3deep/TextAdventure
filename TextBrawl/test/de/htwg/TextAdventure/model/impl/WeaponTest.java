@@ -7,7 +7,6 @@ import org.junit.Test;
 
 import de.htwg.TextAdventure.model.IWeapon;
 import de.htwg.TextAdventure.model.impl.Weapon;
-import de.htwg.TextAdventure.model.impl.Armor.AType;
 import de.htwg.TextAdventure.model.impl.Weapon.WType;
 
 public class WeaponTest {

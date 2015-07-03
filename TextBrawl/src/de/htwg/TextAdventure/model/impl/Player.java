@@ -1,5 +1,7 @@
 package de.htwg.TextAdventure.model.impl;
 
+import com.google.inject.Inject;
+
 import de.htwg.TextAdventure.model.IArmor;
 import de.htwg.TextAdventure.model.IPlayer;
 import de.htwg.TextAdventure.model.IWeapon;
@@ -13,14 +15,28 @@ public class Player extends Character implements IPlayer {
 	private int statPoints;
 	
 	private boolean alive;
+
+	/**
+	 * creates the player with the corresponding roll value
+	 * @param roll
+	 * contains information from start screen (type, etc.)
+	 */
+	@Inject
+	public Player(){
+		allSet(3, 3, 3, 3, 3, 3, 3);
+		playerPosition = 0;
+		statPoints = 0;
+		alive = true;
+	}
 	
 	/**
 	 * creates the player with the corresponding roll value
 	 * @param roll
 	 * contains information from start screen (type, etc.)
 	 */
-	public Player(int maxH, int str, int dex, int cint, int speed, int armorRoll, int wepRoll){
-		allSet(maxH, str, dex, cint, speed, armorRoll, wepRoll);
+	@Inject
+	public Player(int mH, int str, int dex, int cint, int speed){
+		allSet(mH, str, dex, cint, speed, 3, 3);
 		playerPosition = 0;
 		statPoints = 0;
 		alive = true;

@@ -55,5 +55,7 @@ public interface IWorld {
 	 * @return discoveredOtherworld
 	 */
 	public abstract boolean discoveredOtherworld();
+	
+	public abstract void setAll();
 
 }

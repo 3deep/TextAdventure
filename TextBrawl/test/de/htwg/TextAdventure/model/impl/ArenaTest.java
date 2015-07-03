@@ -19,13 +19,13 @@ public class ArenaTest {
 	@Before
 	public void setUp() throws Exception {
 		aTest = new Arena();
-		p1 = new Player(0, 0, 0, 0, 0, 0, 0);
-		p3 = new Player(0, 0, 0, 0, 0, 0, 0);
+		p1 = new Player(0, 0, 0, 0, 0);
+		p3 = new Player(0, 0, 0, 0, 0);
 		p3.giveWeapon(new ItemFactory().newWeapon(0, 0, 0, 4));
-		p2 = new Player(10, 10, 10, 10, 10, 10, 10);
+		p2 = new Player(10, 10, 10, 10, 10);
 		p2.giveArmor(new ItemFactory().newArmor(10, 10, 10, 4));
 		p2.giveWeapon(new ItemFactory().newWeapon(10, 10, 10, 4));
-		p4 = new Player(10, 0, 0, 0, 0, 0, 0);
+		p4 = new Player(10, 0, 0, 0, 0);
 		p4.giveArmor(new ItemFactory().newArmor(0, 0, 0, 4));
 		p4.giveWeapon(new ItemFactory().newWeapon(0, 0, 0, 4));
 		enemy1 = new NPC(1);

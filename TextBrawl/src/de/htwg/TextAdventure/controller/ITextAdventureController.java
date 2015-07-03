@@ -1,5 +1,10 @@
 package de.htwg.TextAdventure.controller;
 
+import com.google.inject.ImplementedBy;
+
+import de.htwg.TextAdventure.controller.impl.TextAdventureController;
+
+@ImplementedBy(TextAdventureController.class)
 public interface ITextAdventureController {
 
 	public abstract void newGame();

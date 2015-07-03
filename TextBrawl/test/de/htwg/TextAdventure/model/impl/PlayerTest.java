@@ -15,7 +15,7 @@ public class PlayerTest {
 
 	final int ZERO = 0;
 	final int ONE = 1;
-	Player testPlayer = new Player(ONE, ZERO, ZERO, ZERO, ZERO, ZERO, ZERO);
+	Player testPlayer = new Player(ONE, ZERO, ZERO, ZERO, ZERO);
 	IItemFactory factory = new ItemFactory();
 	
 	@Test

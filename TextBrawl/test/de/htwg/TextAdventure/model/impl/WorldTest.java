@@ -71,5 +71,10 @@ public class WorldTest {
 	public void testDiscoveredOtherworld(){
 		assertFalse(werld.discoveredOtherworld());
 	}
+	
+	@Test
+	public void testSetAll(){
+		werld.setAll();
+	}
 
 }

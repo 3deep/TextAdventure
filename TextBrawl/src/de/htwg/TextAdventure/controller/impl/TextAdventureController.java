@@ -1,8 +1,11 @@
 package de.htwg.TextAdventure.controller.impl;
 
+import com.google.inject.Inject;
+
 import de.htwg.TextAdventure.controller.ITextAdventureController;
 import de.htwg.TextAdventure.model.IArena;
 import de.htwg.TextAdventure.model.IArmor;
+import de.htwg.TextAdventure.model.INPC;
 import de.htwg.TextAdventure.model.IPlayer;
 import de.htwg.TextAdventure.model.IWeapon;
 import de.htwg.TextAdventure.model.IWorld;
@@ -27,6 +30,7 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	 * @param p Player
 	 * @param w World
 	 */
+	@Inject
 	public TextAdventureController(IPlayer p, IWorld w) {
 		player = p;
 		world = w;
@@ -39,7 +43,7 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	 */
 	@Override
 	public void newGame(){
-		player = new Player(3, 3, 3, 3, 3, 3, 3);
+		player = new Player();
 		setStatus("A new Hero emerges..");
 	}
 	
@@ -124,7 +128,7 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	 /**
 	  * fight fierce battle
 	  */
-	private void battleStart() {
+	protected void battleStart() {
 		battleEnded = false;
 		NPC enemy = new NPC(player.playerPositionGet());
 		while(enemy.currentHealthGet() == 0)
@@ -157,7 +161,7 @@ public class TextAdventureController extends Observable implements IObserver, IT
 		}
 		else if(result == 0)
 			setStatus("You ran from battle");
-		else if(result == 2)
+		else
 			setStatus(arena.getFightStatus() + "\nYou fall defeated in battle.\n\nGAME OVER");
 	}
 	
@@ -167,9 +171,9 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	@Override
 	public void inspectLoot() {
 		String tmp = "";
-		if(lootW != null && lootW.notFists() )
+		if( lootW.notFists() )
 			tmp += lootW.toString() + "\n";
-		if(lootA != null && lootA.notNoArmor() )
+		if( lootA.notNoArmor() )
 			tmp += lootA.toString() + "\n";
 		if(!tmp.equals(""))
 			setStatus("On the Ground you see:\n" + tmp);
@@ -177,12 +181,19 @@ public class TextAdventureController extends Observable implements IObserver, IT
 			setStatus("There is nothing here to be inspected!");
 	}
 	
+	protected void give(IWorld world, IArmor LootA, IWeapon LootW){
+		this.world = world;
+		this.lootA = LootA;
+		this.lootW = LootW;
+		player.incStatPoints();
+	}
+	
 	/* (non-Javadoc)
 	 * @see de.htwg.TextAdventure.controller.ITextAdventureController#lootAvailable()
 	 */
 	@Override
 	public boolean lootAvailable(){
-		return((lootW != null && lootW.notFists()) || (lootA != null && lootA.notNoArmor()) );
+		return((lootW.notFists()) || (lootA.notNoArmor()) );
 	}
 	
 	/* (non-Javadoc)
@@ -397,6 +408,12 @@ public class TextAdventureController extends Observable implements IObserver, IT
 			setStatus(arena.getFightStatus());
 		else
 			battleEnd();
+	}
+	
+	protected void giveArena(){
+		INPC en = new NPC(1);
+		IPlayer p = new Player();
+		arena.battle(p, en);
 	}
 
 	/* (non-Javadoc)
