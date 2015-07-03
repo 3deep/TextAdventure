@@ -34,7 +34,6 @@ public class Player extends Character implements IPlayer {
 	 * @param roll
 	 * contains information from start screen (type, etc.)
 	 */
-	@Inject
 	public Player(int mH, int str, int dex, int cint, int speed){
 		allSet(mH, str, dex, cint, speed, 3, 3);
 		playerPosition = 0;
