@@ -44,6 +44,8 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	@Override
 	public void newGame(){
 		player = new Player();
+		lootW = null;
+		lootA = null;
 		setStatus("A new Hero emerges..");
 	}
 	
@@ -171,9 +173,9 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	@Override
 	public void inspectLoot() {
 		String tmp = "";
-		if( lootW.notFists() ){
+		if(lootW != null && lootW.notFists() ){
 			tmp += lootW.toString() + "\n";}
-		if( lootA.notNoArmor() ){
+		if( lootA != null && lootA.notNoArmor() ){
 			tmp += lootA.toString() + "\n";}
 		if(!tmp.equals("")){
 			setStatus("On the Ground you see:\n" + tmp);}
@@ -193,7 +195,7 @@ public class TextAdventureController extends Observable implements IObserver, IT
 	 */
 	@Override
 	public boolean lootAvailable(){
-		if(lootW != null || lootA != null){
+		if(lootW != null && lootA != null){
 			return((lootW.notFists()) || (lootA.notNoArmor()) );}
 		return false;
 	}

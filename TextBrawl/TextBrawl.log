@@ -1272,3 +1272,312 @@ Str: 0, Dex: 3, Int: 0
 Light Armor (1 Block)
 Str: 1, Dex: 1, Int: 0
 
+INFO main de.htwg.TextAdventure.UI.TUI - To start a new Game, tpye "newGame"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new Hero emerges..
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+If you have any unspent Skillpoints (see in stats) you can upgrade your stats with "upgrade" (HP gives you 2 HP per point).
+Heal yourself with "rest", but only in Town or at the Lake/River
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - To start a new Game, tpye "newGame"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new Hero emerges..
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+If you have any unspent Skillpoints (see in stats) you can upgrade your stats with "upgrade" (HP gives you 2 HP per point).
+Heal yourself with "rest", but only in Town or at the Lake/River
+To show this Text (all available commands), type "help"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You explore the town, yet you don't find anything new. Maybe you should head outside into the Forest to have an Adventure.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new encounter
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy doesn't have a weapon and is wearing a Cloth Armor.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (3-2)but couldn't do any damage.
+(3-1)The enemy swings their Fists (0-0)and did 1 points of Damage.
+You are on 2 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (3-1)but couldn't do any damage.
+(3-1)The enemy swings their Fists (0-0)and did 1 points of Damage.
+You are on 1 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (3-0)but couldn't do any damage.
+(3-1)The enemy swings their Fists (0-0)and did 1 points of Damage.
+You are on 0 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+
+You fall defeated in battle.
+
+GAME OVER
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new Hero emerges..
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You discovered a Forest Cave. Strange sounds are coming out of it.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new encounter
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy doesn't have a weapon and is wearing a Medium Armor.
+You are on 3 out of 3 health points.
+Your enemy has 2 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (0-0)and did 1 points of Damage.
+(3-1)The enemy swings their Fists (0-0)and did 1 points of Damage.
+You are on 2 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (0-0)and did 2 points of Damage.
+
+You managed to beat your foe.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Medium Armor (0 Block)
+Str: 0, Dex: 0, Int: 0
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You discovered a Lake with a River
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new encounter
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Dagger and is wearing a Light Armor.
+You are on 2 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (2-1)but couldn't do any damage.
+(4-1)The enemy swings their Dagger (0-0)and did 1 points of Damage.
+You are on 1 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (2-1)and did 1 points of Damage.
+(4-0)The enemy swings their Dagger (0-0)but couldn't do any damage.
+You are on 1 out of 3 health points.
+Your enemy has 2 out of 3 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (2-1)and did 1 points of Damage.
+(4-1)The enemy swings their Dagger (0-0)and did 1 points of Damage.
+You are on 0 out of 3 health points.
+Your enemy has 1 out of 3 health points.
+
+You fall defeated in battle.
+
+GAME OVER
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new Hero emerges..
+INFO main de.htwg.TextAdventure.UI.TUI - To start a new Game, tpye "newGame"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new Hero emerges..
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+If you have any unspent Skillpoints (see in stats) you can upgrade your stats with "upgrade" (HP gives you 2 HP per point).
+Heal yourself with "rest", but only in Town or at the Lake/River
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - To start a new Game, tpye "newGame"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new Hero emerges..
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+If you have any unspent Skillpoints (see in stats) you can upgrade your stats with "upgrade" (HP gives you 2 HP per point).
+Heal yourself with "rest", but only in Town or at the Lake/River
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - To start a new Game, tpye "newGame"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new Hero emerges..
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+If you have any unspent Skillpoints (see in stats) you can upgrade your stats with "upgrade" (HP gives you 2 HP per point).
+Heal yourself with "rest", but only in Town or at the Lake/River
+To show this Text (all available commands), type "help"
+INFO main de.htwg.TextAdventure.UI.TUI - To start a new Game, tpye "newGame"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new Hero emerges..
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+If you have any unspent Skillpoints (see in stats) you can upgrade your stats with "upgrade" (HP gives you 2 HP per point).
+Heal yourself with "rest", but only in Town or at the Lake/River
+To show this Text (all available commands), type "help"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - There is nothing here to be inspected!
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new encounter
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Long Sword and is wearing a Cloth Armor.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (3-1)but couldn't do any damage.
+(1-0)The enemy swings their Long Sword (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (3-1)but couldn't do any damage.
+(1-0)The enemy swings their Long Sword (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (3-2)but couldn't do any damage.
+(1-0)The enemy swings their Long Sword (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (3-2)but couldn't do any damage.
+(1-0)The enemy swings their Long Sword (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (3-0)and did 2 points of Damage.
+(1-0)The enemy swings their Long Sword (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 3 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (3-0)but couldn't do any damage.
+(1-0)The enemy swings their Long Sword (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 3 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (3-0)and did 1 points of Damage.
+
+You managed to beat your foe.
+INFO main de.htwg.TextAdventure.UI.TUI - To start a new Game, tpye "newGame"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new Hero emerges..
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+If you have any unspent Skillpoints (see in stats) you can upgrade your stats with "upgrade" (HP gives you 2 HP per point).
+Heal yourself with "rest", but only in Town or at the Lake/River
+To show this Text (all available commands), type "help"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new encounter
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Short Sword and is wearing a Light Armor.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 1 health points.
+Now what are you going to do? Attack or Flee?
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (0-0)and did 2 points of Damage.
+
+You managed to beat your foe.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - That is probably a stupid idea here.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Short Sword (2 dmg)
+Str: 2, Dex: 1, Int: 1
+Light Armor (0 Block)
+Str: 0, Dex: 1, Int: 0
+
+INFO main de.htwg.TextAdventure.UI.TUI - To start a new Game, tpye "newGame"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new Hero emerges..
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+If you have any unspent Skillpoints (see in stats) you can upgrade your stats with "upgrade" (HP gives you 2 HP per point).
+Heal yourself with "rest", but only in Town or at the Lake/River
+To show this Text (all available commands), type "help"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new encounter
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Short Sword and is wearing a Cloth Armor.
+You are on 3 out of 3 health points.
+Your enemy has 2 out of 2 health points.
+Now what are you going to do? Attack or Flee?
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (0-0)but couldn't do any damage.
+(0-0)The enemy swings their Short Sword (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 2 out of 2 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (0-0)and did 1 points of Damage.
+(0-0)The enemy swings their Short Sword (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (0-0)but couldn't do any damage.
+(0-0)The enemy swings their Short Sword (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (0-0)but couldn't do any damage.
+(0-0)The enemy swings their Short Sword (0-0)but couldn't do any damage.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 2 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-1)You swing your Fists (0-0)and did 1 points of Damage.
+
+You managed to beat your foe.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Short Sword (0 dmg)
+Str: 0, Dex: 0, Int: 1
+Cloth Armor (0 Block)
+Str: 0, Dex: 1, Int: 0
+
+INFO main de.htwg.TextAdventure.UI.TUI - What do you want to take?
+INFO main de.htwg.TextAdventure.UI.TUI - You equip your new Cloth Armor.
+INFO main de.htwg.TextAdventure.UI.TUI - To start a new Game, tpye "newGame"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new Hero emerges..
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - To show your stats, type "stats", |to save your game, type "save", to load "load"| and to quit, type "quit"
+To explore the area you are currently in, type "explore", to go to an already explored Area, type "goto" and then the Area, list of discovered Areas is "areas"
+In battles attack the enemy with your current weapon with "attack" and flee by typing "flee".
+After a battle you may choose if you want to take the defeated enemies Weapon or Armor by taking one with "take", you can inspect them before with "inspect".
+If you have any unspent Skillpoints (see in stats) you can upgrade your stats with "upgrade" (HP gives you 2 HP per point).
+Heal yourself with "rest", but only in Town or at the Lake/River
+To show this Text (all available commands), type "help"
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new encounter
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Dagger and is wearing a Light Armor.
+You are on 3 out of 3 health points.
+Your enemy has 1 out of 1 health points.
+Now what are you going to do? Attack or Flee?
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (1-0)and did 2 points of Damage.
+
+You managed to beat your foe.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - On the Ground you see:
+Dagger (1 dmg)
+Str: 2, Dex: 0, Int: 2
+Light Armor (1 Block)
+Str: 0, Dex: 0, Int: 2
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You equip your new Light Armor.
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - There is nothing here to be inspected!
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You didnt find anything
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - You discovered a Lake with a River
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new encounter
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - The Battle starts!
+You ready your Fists.
+Your enemy wields a Dagger and is wearing a Medium Armor.
+You are on 3 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+Now what are you going to do? Attack or Flee?
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-2)You swing your Fists (6-3)but couldn't do any damage.
+(2-1)The enemy swings their Dagger (1-0)and did 1 points of Damage.
+You are on 2 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (6-1)but couldn't do any damage.
+(2-1)The enemy swings their Dagger (1-0)and did 1 points of Damage.
+You are on 1 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - (3-0)You swing your Fists (6-0)but couldn't do any damage.
+(2-1)The enemy swings their Dagger (1-0)and did 1 points of Damage.
+You are on 0 out of 3 health points.
+Your enemy has 3 out of 3 health points.
+
+You fall defeated in battle.
+
+GAME OVER
+INFO AWT-EventQueue-0 de.htwg.TextAdventure.UI.TUI - A new Hero emerges..
+INFO main de.htwg.TextAdventure.UI.TUI - Where do you want to go?
+INFO main de.htwg.TextAdventure.UI.TUI - So far you have discovered: Town, Forest, River.
+INFO main de.htwg.TextAdventure.UI.TUI - You arrive in a dark Forest. The villagers talked about Imps that infest the area.
